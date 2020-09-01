@@ -28,7 +28,7 @@ const Intro = ({ IntroProps: { Slogan } }) => {
 
                             <div className="white-text text-center wow fadeInUp">
 
-                                <h3 className="display-1 font-weight-bold text-uppercase">IEEE|ZC</h3>
+                                <h3 className="display-1 font-weight-bold text-uppercase">IEEE| Zewail City</h3>
 
                                 <h5 className="mb-5">{Slogan}</h5>
 

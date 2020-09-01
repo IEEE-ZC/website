@@ -6,6 +6,7 @@ import Events from './Sections/Events'
 import Achievements from './Sections/Achievements'
 import About from './Sections/About'
 import CoreValue from './Sections/CoreValue'
+import WatchUs from './Sections/WatchUs'
 import ScrollSpy from './Sections/ScrollSpy'
 import WOW from 'wowjs'
 const LandingPage = () => {
@@ -13,7 +14,7 @@ const LandingPage = () => {
     const [Load, setLoad] = useState(true);
     useEffect(() => {
         window.scrollTo(0, 0);
-        document.title="IEEE| Home";
+        document.title = "IEEE| Home";
         new WOW.WOW().init();
     }, [])
 
@@ -38,7 +39,8 @@ const LandingPage = () => {
             { id: 3, name: "Achievements", href: "achievements" },
             { id: 4, name: "Glimpse", href: "about" },
             { id: 5, name: "Core Values", href: "core-values" },
-            { id: 6, name: "Blog", href: "blog" },
+            { id: 6, name: "Watch Us", href: "watch-us" },
+            { id: 7, name: "Blog", href: "blog" },
 
         ]
     }
@@ -56,6 +58,7 @@ const LandingPage = () => {
             <Achievements />
             <About AboutProps={AboutProps} />
             <CoreValue />
+            <WatchUs />
 
         </>
     )
