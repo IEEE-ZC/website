@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 const WiderCard = ({ event }) => {
-    useEffect(() => {
-        console.log(event)
-    }, [event])
+
     return (
 
         <div className="col-md-4 col-sm-12 mb-4 mt-5  wow fadeInUp" data-wow-delay="0.2s">
-            <div className="card card-cascade wider card-transparent">
+            <div style={{ height: "500px" }} className="card card-cascade wider card-transparent">
                 {/* <!-- Card image --> */}
                 <div className="view view-cascade overlay">
                     <img src={event.imgSource} alt="..." className="card-img-top" />
@@ -24,10 +22,12 @@ const WiderCard = ({ event }) => {
 
                     <p className="card-text">{event.text}</p>
 
-                    {event.eventLinks !== undefined ? event.eventLinks.map(el => {
-                        return (<a key={el.website} className={`p-2 m-2 fa-lg ${el.class}`} href={`${el.link}`}><i className={`fab fa-${el.website}`}> </i></a>
-                        )
-                    }) : null}
+                    <div style={{ position: "absolute", left: "30%", bottom: "5%" }}>
+                        {event.eventLinks !== undefined ? event.eventLinks.map(el => {
+                            return (<a key={el.website} className={`p-2 m-2 fa-lg ${el.class}`} href={`${el.link}`}><i className={`fab fa-${el.website}`}> </i></a>
+                            )
+                        }) : null}
+                    </div>
                 </div>
 
             </div>
