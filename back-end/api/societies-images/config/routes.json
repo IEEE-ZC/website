@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/societies-images",
+      "handler": "societies-images.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/societies-images/count",
+      "handler": "societies-images.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/societies-images/:id",
+      "handler": "societies-images.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/societies-images",
+      "handler": "societies-images.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/societies-images/:id",
+      "handler": "societies-images.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/societies-images/:id",
+      "handler": "societies-images.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
