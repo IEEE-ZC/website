@@ -9,8 +9,6 @@ const WatchUs = () => {
         { id: 1, link: 'https://www.youtube.com/watch?v=8hLmetqhTZs', color: 'text-dark', href: '/imgs/watchus/watch2.jpg', text: "Future Engineers Camp" },
         { id: 2, link: 'https://www.youtube.com/watch?v=UEAOxT4F43c', href: '/imgs/watchus/watch3.jpg', text: "Walking Robots Competition" },
         { id: 3, link: 'https://www.youtube.com/watch?v=52-cuI-MCSw', href: '/imgs/watchus/watch4.jpg', text: "APPx: Hack your mind" },
-
-
     ];
 
 
@@ -30,8 +28,8 @@ const WatchUs = () => {
                                     <img className="d-block w-100" src={el.href}
                                     />
                                 </a>
-                                <div class="carousel-caption">
-                                    <h3 class={`h3-responsive mb-2 ${el.color}`}>{el.text}</h3>
+                                <div className="carousel-caption">
+                                    <h3 className={`h3-responsive mb-2 ${el.color}`}>{el.text}</h3>
                                 </div>
                             </div>)
                         })}

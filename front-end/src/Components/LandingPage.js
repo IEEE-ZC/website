@@ -8,6 +8,7 @@ import About from './Sections/About'
 import CoreValue from './Sections/CoreValue'
 import WatchUs from './Sections/WatchUs'
 import ScrollSpy from './Sections/ScrollSpy'
+import ContactUs from './Sections/ContactUS.js'
 import WOW from 'wowjs'
 const LandingPage = () => {
 
@@ -40,7 +41,7 @@ const LandingPage = () => {
             { id: 4, name: "Glimpse", href: "about" },
             { id: 5, name: "Core Values", href: "core-values" },
             { id: 6, name: "Watch Us", href: "watch-us" },
-            { id: 7, name: "Blog", href: "blog" },
+            { id: 8, name: "Contact US", href: "contact-us" },
 
         ]
     }
@@ -59,6 +60,7 @@ const LandingPage = () => {
             <About AboutProps={AboutProps} />
             <CoreValue />
             <WatchUs />
+            <ContactUs />
 
         </>
     )
