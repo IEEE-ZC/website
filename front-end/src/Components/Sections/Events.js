@@ -4,7 +4,7 @@ import WiderCard from '../Cards/WiderCard'
 
 const EventsData = [
     {
-        id: '1', title: `AppX20': Shape the Future`, 
+        id: '1', title: `AppX20': Shape the Future`,
         text: 'Here is the annual event comes again after a lot of waiting. Thanks to every member this is one of the most appreciated events in the history of the university!',
         date: '20-11-2020', imgSource: './imgs/events/appx.jpg', eventLinks: [
             { class: "fa-ic", website: "facebook", link: "https://www.facebook.com/" },
@@ -28,12 +28,7 @@ const Events = () => {
 
     return (
         <>
-            {/* media query for iphoneX */}
-            {height === 812 && width === 375 ? <div style={{ height: "110px" }}></div> : null}
-            {/* media query for ipad */}
-            {height === 1024 && width === 768 ? <div style={{ height: "330px" }}></div> : null}
-            {/* media query for ipad pro */}
-            {height === 1366 && width === 1024 ? <div style={{ height: "700px" }}></div> : null}
+            
 
             <div id='events' style={{ height: "60px" }}></div>
             <div style={{ height: "10px" }}></div>

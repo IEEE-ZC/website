@@ -20,7 +20,9 @@ const Modal = () => {
                     {/* <!-- Body --> */}
                     <div className="modal-body">
                         <iframe width='100%' height="400px"
-                            src="https://www.youtube.com/embed/Fv2-LD0Nbgw">
+                            src="https://www.youtube.com/embed/SYlF2_9Zf6w"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                        >
                         </iframe>
                     </div>
 

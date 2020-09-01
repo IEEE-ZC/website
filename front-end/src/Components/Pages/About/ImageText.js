@@ -10,7 +10,9 @@ const ImageText = ({ ImageTextProps }) => {
 
 
                     <div className="zoom col-lg-5 mt-5 col-md-12 mb-3 wow fadeIn" data-wow-delay="0.4s">
-                        <img src={ImageTextProps.img} className="img-fluid z-depth-1 rounded"
+                        <img src={ImageTextProps.img} style={{
+                            filter: 'drop-shadow(0px 1px 6px rgba(0,0,0,0.2))'
+                        }} className="img-fluid "
                             alt="..." />
                         <div className="mask flex-center waves-effect waves-light">
                             <p className="white-text"></p>

@@ -1,9 +1,8 @@
 import React from 'react'
 import Video from './video.mp4'
-import { Link } from 'react-scroll'
 const Intro = ({ IntroProps: { Slogan } }) => {
     return (
-        <section className="" id="home">
+        <section style={{height: "100vh" }} className="" id="home">
             <video
                 autoPlay
                 style={{
@@ -20,7 +19,7 @@ const Intro = ({ IntroProps: { Slogan } }) => {
 
             <div className="mask rgba-gradient">
 
-                <div className="container h-100 d-flex justify-content-center align-items-center">
+                <div style={{ height: "100vh" }} className="container d-flex justify-content-center align-items-center">
 
                     <div className="row pt-5 mt-3">
 
@@ -28,12 +27,12 @@ const Intro = ({ IntroProps: { Slogan } }) => {
 
                             <div className="white-text text-center wow fadeInUp">
 
-                                <h3 style={{ marginTop: "200px" }} className="display-1 font-weight-bold text-uppercase">IEEE | Zewail City</h3>
+                                <h3  className="display-1 font-weight-bold text-uppercase">IEEE|ZC</h3>
 
                                 <h5 className="mb-5">{Slogan}</h5>
 
-                                <Link to="events" smooth={true} duration={1000} className="btn btn-outline-white btn-rounded wow fadeInUp" data-wow-delay="0.2s" href="#about"
-                                    data-offset="100"> <span>EXPLORE MORE</span> </Link>
+                                <button className="btn btn-outline-white btn-rounded wow fadeInUp" data-wow-delay="0.2s" href="#about"
+                                    data-offset="100"> <span>EXPLORE MORE</span> </button>
                             </div>
                         </div>
 

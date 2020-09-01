@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 const WiderCard = ({ event }) => {
-    useEffect(() => {
-        console.log(event)
-    }, [event])
+
     return (
 
         <div className="col-md-4 col-sm-12 mb-4 mt-5  wow fadeInUp" data-wow-delay="0.2s">

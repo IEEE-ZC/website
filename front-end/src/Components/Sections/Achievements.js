@@ -23,10 +23,10 @@ const AchievementsData = [
 const Achievements = () => {
     const [height, setHeight] = useState(window.innerHeight);
     const [width, setWidth] = useState(window.innerWidth);
-    useEffect(() => {
-        console.log(height);
-        console.log(width);
-    }, [height, width]);
+    // useEffect(() => {
+    //     console.log(height);
+    //     console.log(width);
+    // }, [height, width]);
     //1366 657
     //640  360
     // 768 1024 
