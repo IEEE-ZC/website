@@ -1,15 +1,16 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-no-target-blank */
-import React from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { animateScroll as SScroll } from 'react-scroll'
-const Navbar = ({ NavbarProps: { Static, LogoBrand, NavItems, PageLink, isSearchable, socialAccounts, socialLinks } }) => {
-
+const Navbar = ({ NavbarProps: { Static, LogoBrand2, NavItems, PageLink, isSearchable, socialAccounts, socialLinks } }) => {
 
     return (
         <>
             <nav className={`navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar`} id="#portfolioNav">
                 <div className="container smooth-scroll">
-                    <Link onClick={() => { SScroll.scrollToTop() }} to={PageLink}> <img src={LogoBrand} style={{
+                    <Link onClick={() => { SScroll.scrollToTop() }} to={PageLink}> <img id="logoNav" src={LogoBrand2} style={{
                         width: '90px',
                         height: '60px',
                         objectFit: 'contain',

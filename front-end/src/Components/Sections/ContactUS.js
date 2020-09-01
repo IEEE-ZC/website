@@ -57,7 +57,7 @@ const Footer = () => {
 
                                     <div className="text-center">
 
-                                    <button class="btn btn-rounded btn-outline-blue waves-effect">Send <i class="far fa-paper-plane"></i></button>
+                                    <button className="btn btn-rounded btn-outline-blue waves-effect">Send <i className="far fa-paper-plane"></i></button>
 
                                     </div>
                                 </form>

@@ -45,11 +45,12 @@
       if ($(this).scrollTop() > 100) {
         $("nav ul li a").css('color', 'black');
         $(".fa-bars").addClass('black');
+        $("#logoNav").attr("src", './IEEE_Logo.png');
 
       } else {
         $("nav ul li a").css('color', 'white');
         $(".fa-bars").removeClass('black');
-
+        $("#logoNav").attr("src", './IEEE_Logo_White.png');
       }
     })
     $(function () {

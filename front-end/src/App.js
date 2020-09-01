@@ -25,7 +25,8 @@ function App() {
       { website: "fab fa-youtube", href: "https://www.youtube.com/user/IEEEzc" },
       { website: "fas fa-envelope", href: "ieee@zewailcity.edu.eg" },
     ],
-    LogoBrand: "./IEEE_Logo.png"
+    LogoBrand: "./IEEE_Logo.png",
+    LogoBrand2: "./IEEE_Logo_White.png"
 
 
   }
