@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "societies_images",
+  "info": {
+    "name": "societies_images"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "url": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

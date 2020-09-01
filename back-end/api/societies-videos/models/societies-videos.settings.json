@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "societies_videos",
+  "info": {
+    "name": "societies_videos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "url": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}
