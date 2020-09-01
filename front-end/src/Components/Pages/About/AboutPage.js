@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react'
 
 import AboutIntro from './AboutIntro'
 import ImageText from './ImageText'
 import WhatWeDid from './WhatWeDid'
+import VissionMission from './VissionMission'
 import WOW from 'wowjs'
 const AboutPage = () => {
     useEffect(() => {
@@ -79,6 +81,21 @@ const AboutPage = () => {
         ]
 
     }
+    const VissionMissionProps = [
+        {
+            id: 0, title: "Our Vision",
+            text: `
+        Continuing on the path drawn by our previous slogan "Building Community", we aim to create a friendly environment, rich in both technical and non-technical expertise. We dream to bring back the IEEE Zewail City branch as strong as it was and leave a national impact and an in-erasable fingerprint in the fields of Engineering in Egypt and worldwide. We shall strive for Zewail City to leave the message that its name holder had long fought to deliver!
+        `, icon: "far fa-eye"
+        },
+        {
+            id: 1,
+            text: `We believe that the power of IEEE is the power of its people, hence our slogan: 
+        "Working on the intellectual capital of the individuals to suffice the entity's needs."`,
+            icon: "fas fa-bullseye",
+            title: "Our Mission"
+        }
+    ]
     return (
         <>
             <AboutIntro AboutIntroProps={AboutIntroProps} />
@@ -86,8 +103,15 @@ const AboutPage = () => {
                 <ImageText ImageTextProps={ImageTextProps} />
             </div>
             <div className="container">
+                <div className='row'>
+                    <VissionMission text={'text-primary'} VissionMissionProps={VissionMissionProps[0]} />
+                    <VissionMission text={'text-danger'} VissionMissionProps={VissionMissionProps[1]} />
+                </div>
+            </div>
+            <div className="container">
                 <WhatWeDid WhatWeDidProps={WhatWeDidProps} />
             </div>
+
         </>
     )
 }

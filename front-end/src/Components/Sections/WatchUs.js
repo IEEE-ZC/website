@@ -21,7 +21,7 @@ const WatchUs = () => {
             <h1 className="display-1 mt-5 mb-5 text-center wow fadeInUp" data-wow-delay="0.2s" >Watch Us</h1>
 
             <div id="watch-us" className="container d-flex justify-content-center ">
-                <div id="carousel-thumb" className="col-11 carousel slide  carousel-fade carousel-thumbnails" data-ride="carousel">
+                <div id="carousel-thumb" className="col-8 carousel slide  carousel-fade carousel-thumbnails" data-ride="carousel">
                     {/* <!--Slides--> */}
                     <div className="carousel-inner wow fadeInUp" data-wow-delay="0.2s" role="listbox">
                         {WatchUsData.map(el => {

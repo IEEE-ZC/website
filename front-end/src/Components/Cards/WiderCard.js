@@ -9,9 +9,7 @@ const WiderCard = ({ event }) => {
                 {/* <!-- Card image --> */}
                 <div className="view view-cascade overlay">
                     <img src={event.imgSource} alt="..." className="card-img-top" />
-                    <a href="#!">
-                        <div className="mask rgba-white-slight"></div>
-                    </a>
+                    <div className="mask rgba-white-slight"></div>
                 </div>
 
                 {/* <!-- Card content --> */}
