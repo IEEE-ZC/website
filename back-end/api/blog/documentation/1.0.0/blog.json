@@ -596,6 +596,13 @@
               }
             }
           },
+          "categories": {
+            "type": "string",
+            "enum": [
+              "Education",
+              "Culture"
+            ]
+          },
           "created_by": {
             "required": [
               "id",
@@ -696,6 +703,13 @@
           },
           "content": {
             "type": "string"
+          },
+          "categories": {
+            "type": "string",
+            "enum": [
+              "Education",
+              "Culture"
+            ]
           },
           "created_by": {
             "type": "string"

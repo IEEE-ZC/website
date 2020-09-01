@@ -26,6 +26,13 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "categories": {
+      "type": "enumeration",
+      "enum": [
+        "Education",
+        "Culture"
+      ]
     }
   }
 }
