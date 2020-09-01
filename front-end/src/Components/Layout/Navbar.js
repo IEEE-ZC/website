@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Link as Scroll } from 'react-scroll'
 import { animateScroll as SScroll } from 'react-scroll'
 const Navbar = ({ NavbarProps: { Static, LogoBrand, NavItems, PageLink, isSearchable, socialAccounts, socialLinks } }) => {
 
@@ -14,13 +13,14 @@ const Navbar = ({ NavbarProps: { Static, LogoBrand, NavItems, PageLink, isSearch
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
                         aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-bars"></i>
+                        <i className="fas fa-bars"></i>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent-7">
                         <ul className="ml-5 mt-3 navbar-nav mr-auto smooth-scroll">
                             {Static ? NavItems.map(element => {
                                 return (<li key={element.id} className="nav-item">
-                                    <Scroll className="nav-link font-italic font-weight-bold" to={element.href} smooth={true} duration={1000} data-offset="60">{element.name}</Scroll>
+                                    <Link className="nav-link mx-3 font-italic font-weight-bold" to={element.href}
+                                        >{element.name}</Link>
                                 </li>)
                             }) : null}
 
@@ -34,7 +34,10 @@ const Navbar = ({ NavbarProps: { Static, LogoBrand, NavItems, PageLink, isSearch
                         {socialLinks === true ? <ul className="mt-3 navbar-nav nav-flex-icons">
                             {socialAccounts.map(el => {
                                 return (<li key={el.id} className="nav-item">
-                                    <a target="_blank" href={el.href} className="nav-link"><i  className={`fa-2x ${el.website}`}></i></a>
+                                    {el.website === "fas fa-envelope" ?
+                                        <a target="_blank" href={`mailto: ${el.href}`} className="nav-link"><i className={`fa-2x ${el.website}`}></i></a>
+                                        : <a target="_blank" href={el.href} className="nav-link"><i className={`fa-2x ${el.website}`}></i></a>}
+
                                 </li>)
                             })}
                         </ul> : null
