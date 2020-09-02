@@ -9,7 +9,12 @@ import AboutPage from './Components/Pages/About/AboutPage';
 import Navbar from './Components/Layout/Navbar';
 import MagazineListPage from './Components/Pages/Magazine/MagazineListPage';
 import BlogListPage from './Components/Pages/Blog/BlogListPage';
+
+import Juniors from './Components/Pages/Juniors/JuniorsPage'
+import WIE from './Components/Pages/WIE/WIEPage'
+
 import BlogPage from './Components/Pages/Blog/BlogPage';
+
 function App() {
   const NavbarProps = {
     NavItems: [
@@ -45,7 +50,12 @@ function App() {
         <Route exact path="/about" component={AboutPage} />
         <Route exact path='/magazine' component={MagazineListPage} />
         <Route exact path="/blog" component={BlogListPage} />
+
+        <Route exact path="/juniors" component={Juniors} />
+        <Route exact path="/WIE" component={WIE} />
+
         <Route path="/blog/:id" component={BlogPage} />
+
       </Switch>
     </Router>
   );
