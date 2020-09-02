@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wies",
+  "info": {
+    "name": "wie"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "job": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
