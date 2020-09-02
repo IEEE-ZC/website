@@ -45,7 +45,7 @@ function App() {
         <Route exact path="/about" component={AboutPage} />
         <Route exact path='/magazine' component={MagazineListPage} />
         <Route exact path="/blog" component={BlogListPage} />
-        <Route path="/blog/:id" component={BlogPage} />
+        <Route path="/blog/:id" component={BlogPage}  />
       </Switch>
     </Router>
   );

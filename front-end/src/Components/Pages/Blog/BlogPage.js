@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../../Layout/Header';
 import { useParams } from 'react-router-dom';
 import Moment from 'react-moment';
-import ReactMarkdown from 'react-markdown';
+// import ReactMarkdown from 'react-markdown';
+// import MDReactComponent from 'markdown-react-js';
+import MarkdownPreview from '@uiw/react-markdown-preview';
+
+import axios from 'axios';
 
 const BlogPage = () => {
-	const input = `# website
-  # A website for IEEE student branch in Zewail City
-  `;
 	const { id } = useParams();
+	const [post, setPost] = useState({});
+	const [image, setImage] = useState();
+	useEffect(() => {
+		axios
+			.get(`http://localhost:1337/blog-posts/${id}`)
+			.then((res) => {
+        setPost(res.data);
+        setImage(res.data.cover[0].url)
+			});
+	}, []);
+
 	return (
 		<>
-			<Header image='https://mdbootstrap.com/img/Photos/Others/city7.jpg' />
+			<Header image={image} darken />
 			<main>
 				<div className='container-fluid mb-5'>
 					<div className='row' style={{ marginTop: '-100px' }}>
@@ -20,17 +32,17 @@ const BlogPage = () => {
 								<div className='card-body'>
 									<div className='container'>
 										<h1 className='text-center h1 pt-4 mb-3'>
-											<strong>Title of the news {id}</strong>
+											<strong>{post.title}</strong>
 										</h1>
 
 										<div className='row'>
 											<div className='col-md-12 col-xl-12 d-flex justify-content-center'>
 												<p className='font-small dark-grey-text mb-1'>
-													<strong>Author:</strong> Jimmy Brown
+													<strong>Author:</strong> {post.author}
 												</p>
 
 												<p className='font-small grey-text mb-0 ml-3'>
-													<Moment fromNow from='2020/5/5' />
+													<Moment fromNow from={post.date} />
 												</p>
 											</div>
 										</div>
@@ -39,7 +51,9 @@ const BlogPage = () => {
 											<div className='col-md-12 col-xl-12'>
 												<form>
 													<div className='row mt-3'>
-														<ReactMarkdown source={input} />
+														{/* <ReactMarkdown source={post.content} /> */}
+														{/* <MDReactComponent text="Some **bold** and *italic* texts" />    */}
+														<MarkdownPreview source={post.content} />
 													</div>
 												</form>
 											</div>
