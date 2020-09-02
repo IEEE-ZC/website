@@ -1,19 +1,25 @@
 import React from 'react';
 
-const Header = ({ image, heading, content }) => {
+const Header = ({
+	image = 'https://mdbootstrap.com/img/Photos/Others/slide4.jpg',
+	heading,
+	content,
+}) => {
 	return (
 		<div
 			style={{
-				backgroundImage:
-					"url('https://mdbootstrap.com/img/Photos/Others/slide4.jpg')",
+				backgroundImage: `url(${image})`,
 				backgroundRepeat: 'no-repeat',
 				backgroundSize: 'cover',
 			}}
 		>
-			<div className='full-bg-img  flex-center white-text rgba-stylish-strong'>
-				<ul className='animated fadeIn col-md-12 list-unstyled'>
+			<div className='full-bg-img  flex-center white-text rgba-stylish-strong p-5'>
+				<ul
+					style={{ padding: '6rem' }}
+					className='animated fadeIn col-md-12 list-unstyled m-0'
+				>
 					<li>
-						<h1 className='h1-responsive font-weight-bold mt-5 pt-5 '>
+						<h1 className='h1-responsive font-weight-bold'>
 							{heading}
 						</h1>
 					</li>
