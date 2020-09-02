@@ -8,7 +8,7 @@ import About from './Sections/About'
 import CoreValue from './Sections/CoreValue'
 import WatchUs from './Sections/WatchUs'
 import ScrollSpy from './Sections/ScrollSpy'
-import ContactUs from './Sections/ContactUS.js'
+import Footer from './Layout/Footer'
 import WOW from 'wowjs'
 const LandingPage = () => {
 
@@ -60,7 +60,7 @@ const LandingPage = () => {
             <About AboutProps={AboutProps} />
             <CoreValue />
             <WatchUs />
-            <ContactUs />
+            <Footer />
 
         </>
     )
