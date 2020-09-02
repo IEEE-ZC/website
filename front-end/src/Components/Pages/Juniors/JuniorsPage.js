@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import JuniorIntro from './JuniorIntro'
+import JuniorsTeam from './JuniorTeam'
 import WOW from 'wowjs'
 const JuniorsPage = () => {
 
@@ -16,6 +17,7 @@ const JuniorsPage = () => {
     return (
         <>
             <JuniorIntro JuniorIntroProps={JuniorIntroProps} />
+            <JuniorsTeam />
 
         </>
     )
