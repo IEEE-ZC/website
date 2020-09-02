@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/juniors",
+      "handler": "juniors.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/juniors/count",
+      "handler": "juniors.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/juniors/:id",
+      "handler": "juniors.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/juniors",
+      "handler": "juniors.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/juniors/:id",
+      "handler": "juniors.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/juniors/:id",
+      "handler": "juniors.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

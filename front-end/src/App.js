@@ -50,12 +50,9 @@ function App() {
         <Route exact path="/about" component={AboutPage} />
         <Route exact path='/magazine' component={MagazineListPage} />
         <Route exact path="/blog" component={BlogListPage} />
-
+        <Route path="/blog/:id" component={BlogPage} />
         <Route exact path="/juniors" component={Juniors} />
         <Route exact path="/WIE" component={WIE} />
-
-        <Route path="/blog/:id" component={BlogPage} />
-
       </Switch>
     </Router>
   );

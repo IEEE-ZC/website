@@ -4,12 +4,13 @@ const Header = ({
 	image = 'https://mdbootstrap.com/img/Photos/Others/slide4.jpg',
 	heading,
 	content,
+	darken
 }) => {
 	return (
 		<div
 			style={{
 				backgroundImage: `url(${image})`,
-				filter: 'brightness(0.5)',
+				filter: darken ? 'brightness(0.5)' : '',
 				height: '400px',
 				backgroundPosition: 'center',
 				backgroundRepeat: 'no-repeat',
