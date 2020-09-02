@@ -1,9 +1,23 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
+
+import React, { useState } from 'react'
 
 const Footer = () => {
+    const [form, setForm] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    })
+    const onChange = e => setForm({ ...form, [e.target.name]: e.target.value });
+
+    const onSubmit = e => {
+        e.preventDefault();
+        console.log(form);
+    }
     return (
         <>
             <div style={{ backgroundColor: '#ddf3f5' }}>
@@ -17,40 +31,25 @@ const Footer = () => {
                                         <h3><i className="fas fa-envelope"></i> Write to us</h3>
                                     </div>
                                     <b />
-                                    <form>
+                                    <form onSubmit={onSubmit}>
                                         <div className="md-form">
                                             <i className="fas fa-user prefix"></i>
-                                            <input name='name' type="text" required id="form3" className="form-control" />
+                                            <input onChange={onChange} name='name' type="text" required id="form3" className="form-control" />
                                             <label htmlFor="form3">Your Name</label>
-
                                         </div>
-
                                         <div className="md-form">
-
                                             <i className="fas fa-envelope prefix"></i>
-
-                                            <input name='email' type="email" required id="form2" className="form-control" />
-
+                                            <input onChange={onChange} name='email' type="email" required id="form2" className="form-control" />
                                             <label htmlFor="form2">Your Email</label>
-
                                         </div>
-
                                         <div className="md-form">
-
                                             <i className="fas fa-tag prefix"></i>
-
-                                            <input required name='subject' type="text" id="form32" className="form-control" />
-
+                                            <input onChange={onChange} required name='subject' type="text" id="form32" className="form-control" />
                                             <label htmlFor="form32">Subject</label>
-
                                         </div>
-
                                         <div className="md-form">
-
                                             <i className="fas fa-pencil-alt prefix"></i>
-
-                                            <textarea required name='message' type="text" id="form8" className="md-textarea form-control" rows="3"></textarea>
-
+                                            <textarea onChange={onChange} required name='message' type="text" id="form8" className="md-textarea form-control" rows="3"></textarea>
                                             <label htmlFor="form8"> Your Message</label>
 
                                         </div>
@@ -106,7 +105,7 @@ const Footer = () => {
                 </section>
             </div>
             <div style={{ backgroundColor: "#6A197D" }} className="footer-copyright text-center py-3 white-text">© {new Date().getFullYear()} Copyright: {' '}
-               <a className="text-black-50" target="_blank" href="https://www.facebook.com/IEEEZC/"> IEEE|ZC</a>
+                <a className="text-black-50" target="_blank" href="https://www.facebook.com/IEEEZC/"> IEEE|ZC</a>
             </div>
         </>
     )
