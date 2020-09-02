@@ -23,7 +23,7 @@ const WIEIntro = ({ WIEIntroProps }) => {
                                             </h5>
                                         </li>
                                         <li className="wow fadeIn" data-wow-delay="0.4s">
-                                            <Link to="img-text" smooth={true} duration={1000} className="btn deep-orange pink-gradient btn-rounded btn-lg font-weight-bold">Get Started</Link>
+                                            <Link to="team-members-Wie" smooth={true} duration={1000} className="btn deep-orange pink-gradient btn-rounded btn-lg font-weight-bold">Get Started</Link>
                                         </li>
                                     </ul>
                                 </div>
