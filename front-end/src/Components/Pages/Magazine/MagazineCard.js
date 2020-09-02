@@ -4,6 +4,7 @@ import Moment from 'react-moment';
 const MagazineCard = ({
 	image = 'https://mdbootstrap.com/img/Photos/Others/img%20(43).jpg',
 	title,
+	hello,
 	content,
 	date,
 	author,
