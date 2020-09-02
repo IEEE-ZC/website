@@ -8,6 +8,7 @@ import LandingPage from './Components/LandingPage';
 import AboutPage from './Components/Pages/About/AboutPage';
 import Navbar from './Components/Layout/Navbar';
 import MagazineListPage from './Components/Pages/Magazine/MagazineListPage';
+import BlogListPage from './Components/Pages/Blog/BlogListPage';
 function App() {
   const NavbarProps = {
     NavItems: [
@@ -41,6 +42,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/about" component={AboutPage} />
+        <Route exact path='/magazine' component={MagazineListPage} />
+        <Route exact path="/blog" component={BlogListPage} />
       </Switch>
     </Router>
   );
