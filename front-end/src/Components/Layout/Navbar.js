@@ -36,6 +36,7 @@ const Navbar = ({
                             className='mine-logo'
                             alt=''
                             id="logoNav"
+                            objectFit='contain'
                         />
                     </Link>
                     <button
@@ -53,13 +54,13 @@ const Navbar = ({
                         className='collapse navbar-collapse'
                         id='navbarSupportedContent-7'
                     >
-                        <ul className='ml-5 mt-3 navbar-nav mr-auto smooth-scroll'>
+                        <ul className='ml-5  navbar-nav mr-auto smooth-scroll'>
                             {Static
                                 ? NavItems.map((element) => {
                                     return (
                                         <li key={element.id} className='nav-item mx-3'>
                                             <Link
-                                                className='nav-link font-italic font-weight-bold'
+                                                className='nav-link font-weight-bold'
                                                 to={element.href}
                                             >
                                                 {element.name}
@@ -82,7 +83,7 @@ const Navbar = ({
                             </form>
                         ) : null}
                         {socialLinks === true ? (
-                            <ul className='mt-3 navbar-nav nav-flex-icons'>
+                            <ul className='navbar-nav nav-flex-icons'>
                                 {socialAccounts.map((el) => {
                                     return (
                                         <li key={el.id} className='nav-item'>
