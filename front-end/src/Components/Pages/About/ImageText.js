@@ -26,12 +26,55 @@ const ImageText = ({ ImageTextProps }) => {
                         </h1>
 
 
-                        <p align="justify" className="grey-text">
+                        {/* <p align="justify" className="grey-text">
                             {ImageTextProps.para1}
                         </p>
                         <p align="justify" className="grey-text">
                             {ImageTextProps.para2}
-                        </p>
+                        </p> */}
+
+                        <div className="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                            <div className="card">
+                                <div className="card-header" role="tab" id="headingOne1">
+                                    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+                                        aria-controls="collapseOne1">
+                                        <h5 className="mb-0">
+                                        Zewail City of Science and Technology <i className="fas fa-angle-down rotate-icon"></i>
+                                        </h5>
+                                    </a>
+                                </div>
+
+
+                                <div id="collapseOne1" className="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                    <div className="card-body">
+                                        {ImageTextProps.para1}
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div className="card">
+                                <div className="card-header" role="tab" id="headingTwo2">
+                                    <a className="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+                                        aria-expanded="false" aria-controls="collapseTwo2">
+                                        <h5 className="mb-0">
+                                        IEEE Zewail City community  <i className="fas fa-angle-down rotate-icon"></i>
+                                        </h5>
+                                    </a>
+                                </div>
+
+
+                                <div id="collapseTwo2" className="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+                                    <div className="card-body">
+                                        {ImageTextProps.para2}
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
 
                     </div>
 
