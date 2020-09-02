@@ -6,6 +6,7 @@ import ImageText from './ImageText'
 import WhatWeDid from './WhatWeDid'
 import VissionMission from './VissionMission'
 import Footer from '../../Layout/Footer'
+import OurAmazingTeam from './OurAmazingTeam'
 import WOW from 'wowjs'
 const AboutPage = () => {
     useEffect(() => {
@@ -112,6 +113,7 @@ const AboutPage = () => {
             <div className="container">
                 <WhatWeDid WhatWeDidProps={WhatWeDidProps} />
             </div>
+            <OurAmazingTeam />
             <Footer />
         </>
     )
