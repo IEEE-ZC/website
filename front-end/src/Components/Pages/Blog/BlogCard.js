@@ -9,9 +9,12 @@ const BlogCard = ({
 	author,
 }) => {
 	return (
-		<div className='col-md-6 mb-4' style={{ cursor: 'pointer' }}>
+		<div
+			className='col-md-6 mb-4'
+			style={{ cursor: 'pointer' }}
+		>
 			<div className='card mb-3 text-center hoverable'>
-				<div className='card-body'>
+				<div className='card-body' style={{ borderRadius: '5px' }}>
 					<div className='row align-items-center'>
 						<div className='col-md-5 mx-3 my-3'>
 							<div className='view overlay rgba-white-slight'>
@@ -34,7 +37,7 @@ const BlogCard = ({
 									: content.substring(0, 35) + '...'}
 							</p>
 
-							<p classNameName='m-0'>
+							<p className='m-0'>
 								by <strong>{author}</strong>
 								, <Moment from='2020-04-19' ago date={date} />
 							</p>
