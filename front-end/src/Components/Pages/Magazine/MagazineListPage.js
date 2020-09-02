@@ -6,8 +6,7 @@ const MagazineListPage = () => {
 	return (
 		<>
 			<Header
-				heading='hello world this is me'
-				content='Lorem ipsum dolor sit amet.'
+				heading='IEEE MAGAZINE'
 			/>
 			<main>
 				<div className='container-fluid mt-5'>
