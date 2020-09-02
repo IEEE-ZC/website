@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 const Footer = () => {
     const [form, setForm] = useState({

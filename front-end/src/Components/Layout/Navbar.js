@@ -32,7 +32,7 @@ const Navbar = ({
                         {' '}
                         <img
                             src={LogoBrand2}
-                            style={{ width: '60px', height: '60px' }}
+                            style={{ width: '90px', height: '60px' }}
                             className='mine-logo'
                             alt=''
                             id="logoNav"
@@ -57,7 +57,7 @@ const Navbar = ({
                             {Static
                                 ? NavItems.map((element) => {
                                     return (
-                                        <li key={element.id} className='nav-item'>
+                                        <li key={element.id} className='nav-item mx-3'>
                                             <Link
                                                 className='nav-link font-italic font-weight-bold'
                                                 to={element.href}
