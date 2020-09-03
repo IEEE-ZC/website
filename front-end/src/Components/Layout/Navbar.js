@@ -36,7 +36,7 @@ const Navbar = ({
                             className='mine-logo'
                             alt=''
                             id="logoNav"
-                            objectFit='contain'
+                            objectfit='contain'
                         />
                     </Link>
                     <button
@@ -48,7 +48,7 @@ const Navbar = ({
                         aria-expanded='false'
                         aria-label='Toggle navigation'
                     >
-                        <i class='fas fa-bars'></i>
+                        <i className='fas fa-bars'></i>
                     </button>
                     <div
                         className='collapse navbar-collapse'

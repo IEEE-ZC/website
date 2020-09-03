@@ -1,7 +1,21 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
+import { JUNIORS } from '../../../EndPoints'
 const JuniorTeam = () => {
+
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        axios.get(JUNIORS)
+            .then(res => {
+                console.log(res.data);
+                setData(res.data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }, [])
     return (
         <div className="container">
             <section id="testimonials" className="mb-5">
@@ -24,21 +38,23 @@ const JuniorTeam = () => {
                         <div className="carousel-item active">
 
                             <div className="row">
-                                <div className="col-md-4">
-                                    <div className="testimonial">
+                                {data !== [] ? data.map(el => {
+                                    return (<div key={el.id} className="col-md-4">
+                                        <div className="testimonial">
 
-                                        <div className="avatar mx-auto mb-4">
-                                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(26).jpg"
-                                                className="rounded-circle img-fluid" />
+                                            <div className="avatar mx-auto mb-4">
+                                                <img style={{ width: '160px', height: '160px' }} src={el.image.name}
+                                                    className="rounded-circle img-fluid" />
+                                            </div>
+
+                                            <h4 className="font-weight-bold">{el.name}</h4>
+
+                                            <p>
+                                                <i className="fas fa-quote-left"></i> {el.job} </p>
                                         </div>
 
-                                        <h4 className="font-weight-bold">Anna Deynah</h4>
-
-                                        <p>
-                                            <i className="fas fa-quote-left"></i> job </p>
-                                    </div>
-
-                                </div>
+                                    </div>)
+                                }) : null}
 
                                 <div className="col-md-4">
                                     <div className="testimonial">
@@ -72,6 +88,8 @@ const JuniorTeam = () => {
                                             <i className="fas fa-quote-left"></i> test</p>
                                     </div>
                                 </div>
+
+
                             </div>
 
                         </div>

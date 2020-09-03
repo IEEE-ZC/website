@@ -21,7 +21,7 @@ const Modal = () => {
                     <div className="modal-body">
                         <iframe width='100%' height="400px"
                             src="https://www.youtube.com/embed/SYlF2_9Zf6w"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen
                         >
                         </iframe>
                     </div>
