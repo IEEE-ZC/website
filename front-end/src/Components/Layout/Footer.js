@@ -4,19 +4,30 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import React, { useState } from 'react'
-
+import { CONTACT_US } from '../../EndPoints'
+import axios from 'axios'
 const Footer = () => {
     const [form, setForm] = useState({
         name: '',
         email: '',
         subject: '',
-        message: ''
+        content: ''
     })
     const onChange = e => setForm({ ...form, [e.target.name]: e.target.value });
 
-    const onSubmit = e => {
+    const onSubmit =  e => {
         e.preventDefault();
-        console.log(form);
+        console.log(form)
+        const config = {
+            headers: {
+                method: 'Post',
+                'Content-Type': 'application/json'
+            }
+        }
+        axios
+            .post(CONTACT_US, form, config)
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
     }
     return (
         <>
@@ -49,7 +60,7 @@ const Footer = () => {
                                         </div>
                                         <div className="md-form">
                                             <i className="fas fa-pencil-alt prefix"></i>
-                                            <textarea onChange={onChange} required name='message' type="text" id="form8" className="md-textarea form-control" rows="3"></textarea>
+                                            <textarea onChange={onChange} required name='content' type="text" id="form8" className="md-textarea form-control" rows="3"></textarea>
                                             <label htmlFor="form8"> Your Message</label>
 
                                         </div>
