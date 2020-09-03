@@ -14,7 +14,7 @@ const BlogPage = () => {
 	const [image, setImage] = useState();
 	useEffect(() => {
 		axios
-			.get(`http://localhost:1337/blog-posts/${id}`)
+			.get(`https://sleepy-falls-48407.herokuapp.com/blog-posts/${id}`)
 			.then((res) => {
         setPost(res.data);
         setImage(res.data.cover[0].url)
