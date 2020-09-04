@@ -3,8 +3,6 @@ import React, { useEffect, useState } from 'react';
 import Header from '../../Layout/Header';
 import { useParams } from 'react-router-dom';
 import Moment from 'react-moment';
-// import ReactMarkdown from 'react-markdown';
-// import MDReactComponent from 'markdown-react-js';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 
 import axios from 'axios';
@@ -54,7 +52,7 @@ const BlogPage = () => {
 													<div className='row mt-3'>
 														{/* <ReactMarkdown source={post.content} /> */}
 														{/* <MDReactComponent text="Some **bold** and *italic* texts" />    */}
-														<MarkdownPreview source={post.content} />
+														<MarkdownPreview source={post.content} disallowedTypes={['image','code', 'list']} />
 													</div>
 												</form>
 											</div>
