@@ -9,61 +9,6 @@ import BlogCard from './BlogCard';
 import Header from '../../Layout/Header';
 import style from './style.module.css';
 
-// some fake (hard) coded
-// {
-// 		title: 'hello world',
-// 		content: 'lorem ipsum dolor sit amet',
-// 		author: 'devien geroge',
-// 		date: '2020/5/2',
-// 	},
-// 	{
-// 		title: 'hello world2',
-// 		content: 'lorem ipsum dolor sit amet',
-// 		author: 'devien ddddsss',
-// 		date: '2020/1/2',
-// 	},
-// 	{
-// 		title: 'hello world2',
-// 		content: 'lorem ipsum dolor sit amet',
-// 		author: 'devien aa',
-// 		date: '2020/7/2',
-// 	},
-// 	{
-// 		title: 'hello world',
-// 		content: 'lorem ipsum dolor sit amet',
-// 		author: 'devien geroge',
-// 		date: '2020/5/2',
-// 	},
-// 	{
-// 		title: 'hello world2',
-// 		content: 'lorem ipsum dolor sit amet',
-// 		author: 'devien ddddsss',
-// 		date: '2020/1/2',
-// 	},
-// 	{
-// 		title: 'hello world2',
-// 		content: 'lorem ipsum dolor sit amet',
-// 		author: 'devien aa',
-// 		date: '2020/7/2',
-// 	},
-// 	{
-// 		title: 'hello world',
-// 		content: 'lorem ipsum dolor sit amet',
-// 		author: 'devien geroge',
-// 		date: '2020/5/2',
-// 	},
-// 	{
-// 		title: 'hello world2',
-// 		content: 'lorem ipsum dolor sit amet',
-// 		author: 'devien ddddsss',
-// 		date: '2020/1/2',
-// 	},
-// 	{
-// 		title: 'hello world2',
-// 		content: 'lorem ipsum dolor sit amet',
-// 		author: 'devien aa',
-// 		date: '2020/7/2',
-// 	},
 const BlogListPage = () => {
 	const [posts, setPosts] = useState([]);
 	const [index, setIndex] = useState(false);
@@ -92,16 +37,12 @@ const BlogListPage = () => {
 								image={post.cover[0].url}
 								date={post.updated_by.updatedAt}
 								// author={post.author}
-								// date={post.date}
-								// onClick={() =>
-								// 	history.push(`/blog/${post._id}`)
-								// }
 							/>
 						))}
 					</ul>
 
 					<AnimatePresence>
-						{/* render the single card */}
+						{/* render the single card and overlay under it */}
 						{index !== false && (
 							<BlogCard
 								full
@@ -116,17 +57,6 @@ const BlogListPage = () => {
 							/>
 						)}
 
-						{/* render the overlay
-						{index !== false && (
-							// <motion.div
-							// 	initial={{ opacity: 0 }}
-							// 	animate={{ opacity: 0.6 }}
-							// 	exit={{ opacity: 0, transition: { duration: 0.15 } }}
-							// 	transition={{ duration: 0.2, delay: 0.05 }}
-							// 	key='overlay'
-							// 	className={style['overlay']}
-							// />
-						)} */}
 					</AnimatePresence>
 				</div>
 			</AnimateSharedLayout>
