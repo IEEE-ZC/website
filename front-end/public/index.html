@@ -40,14 +40,25 @@
   <script type="text/javascript" src="./js/mdb.js"></script>
 
   <script>
+    $(document).ready(function () {
+      if (window.innerWidth <= 991) {
+        $('nav').addClass('white');
+        $("#logoNav").attr("src", './IEEE_Logo.png');
+        $('.fa-bars').css('color', 'black');
+        $("nav ul li a").css('color', 'black');
+      }
+    });
+
     $(window).scroll(function () {
-      $("nav").toggleClass('white', $(this).scrollTop() > 100)
+      if (window.innerWidth > 991)
+        $("nav").toggleClass('white', $(this).scrollTop() > 100)
       if ($(this).scrollTop() > 100) {
         $("nav ul li a").css('color', 'black');
-        $(".fa-bars").addClass('black');
+        $('.fa-bars').css('color', 'black');
         $("#logoNav").attr("src", './IEEE_Logo.png');
 
-      } else {
+      }
+      if ($(this).scrollTop() < 100 && window.innerWidth > 991) {
         $("nav ul li a").css('color', 'white');
         $(".fa-bars").removeClass('black');
         $("#logoNav").attr("src", './IEEE_Logo_White.png');
