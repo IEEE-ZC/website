@@ -59,7 +59,7 @@
 				$('.fa-bars').css('color', 'black');
 				$("#logoNav").attr("src", 'https://res.cloudinary.com/strapiieee/image/upload/v1599303256/IEEE_Logo_o54agg.png');
 			}
-			
+
 			if ($(this).scrollTop() < 100 && window.innerWidth > 991) {
 				$("nav ul li a").css('color', 'white');
 				$("nav").removeClass("z-depth-1");
@@ -73,6 +73,29 @@
 		$('.carousel').carousel({
 			interval: 500
 		})
+		$(document).ready(function () {
+			$('.fa-facebook').hover(function () {
+				$(this).toggleClass('blue-text');
+			}, function () {
+				$(this).toggleClass('blue-text');
+			})
+			$('.fa-twitter').hover(function () {
+				$(this).toggleClass('light-blue-text');
+			}, function () {
+				$(this).toggleClass('light-blue-text');
+			})
+			$('.fa-youtube').hover(function () {
+				$(this).toggleClass('red-text');
+			}, function () {
+				$(this).toggleClass('red-text');
+			})
+			$('.fa-envelope').hover(function () {
+				$(this).toggleClass('yellow-text');
+			}, function () {
+				$(this).toggleClass('yellow-text');
+			})
+		})
+
 	</script>
 
 </body>
