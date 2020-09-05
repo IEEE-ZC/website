@@ -119,10 +119,6 @@ li {
 	right: 0;
 }
 
-.single-image-container * {
-	/* pointer-events: all; */
-}
-
 .button {
 	background-color: #fff;
 	display: flex;

@@ -15,6 +15,7 @@ const BlogCard = ({
 	full,
 	content,
 	date,
+	page,
 	author,
 	onClick,
 	onDrag,
@@ -23,10 +24,8 @@ const BlogCard = ({
 	const { width } = useWindowSize();
 	let history = useHistory();
 	const contentText = markdownToTxt(content, { pedantic: true });
-	console.log(contentText.slice(0, 50));
 
 	if (!full) {
-		console.log(full);
 		return (
 			<li className={style['card']} onClick={onClick}>
 				<div className={style['card-content-container']}>
@@ -61,7 +60,6 @@ const BlogCard = ({
 		);
 	}
 	if (full) {
-		console.log(style.open);
 		return (
 			<div
 				className={`${style['card-content-container']} ${style.open}`}
@@ -111,7 +109,7 @@ const BlogCard = ({
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ delay: 0.1, stiffness: 15 }}
-						onClick={() => history.push({ pathname: `/blog/${id}` })}
+						onClick={() => history.push({ pathname: `/blog/${page}` })}
 					>
 						Go to blog
 					</motion.div>

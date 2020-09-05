@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {
-	AnimateSharedLayout,
-	AnimatePresence,
-} from 'framer-motion';
+import { AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 
 import BlogCard from './BlogCard';
 import Header from '../../Layout/Header';
@@ -18,8 +15,13 @@ const BlogListPage = () => {
 			.get('https://sleepy-falls-48407.herokuapp.com/blog-posts')
 			.then((res) => {
 				setPosts(res.data);
+				console.log(res.data);
 			});
 	}, []);
+
+	useEffect(() => {
+		console.log();
+	}, [index]);
 
 	return (
 		<>
@@ -27,27 +29,28 @@ const BlogListPage = () => {
 				<Header heading='IEEE Latest News' />
 				<div className='container'>
 					<ul className={`${style['card-list']}`}>
-						{posts.map((post, index) => (
-							<BlogCard
-								key={post.title}
-								id={post.title}
-								title={post.title}
-								content={post.content}
-								onClick={() => setIndex(index)}
-								image={post.cover[0].url}
-								date={post.updated_by.updatedAt}
-								// author={post.author}
-							/>
-						))}
+						{posts &&
+							posts.map((post, index) => (
+								<BlogCard
+									key={index}
+									id={index}
+									title={post.title}
+									content={post.content}
+									onClick={() => setIndex(index)}
+									image={post.cover[0].url}
+									date={post.updated_by.updatedAt}
+									// author={post.author}
+								/>
+							))}
 					</ul>
-
 					<AnimatePresence>
 						{/* render the single card and overlay under it */}
 						{index !== false && (
 							<BlogCard
 								full
-								key={posts[index].id}
-								id={posts[index].id}
+								key={index}
+								id={index}
+								page={posts[index]._id}
 								title={posts[index].title}
 								content={posts[index].content}
 								image={posts[index].cover[0].url}
@@ -56,7 +59,6 @@ const BlogListPage = () => {
 								overlayClick={() => setIndex(false)}
 							/>
 						)}
-
 					</AnimatePresence>
 				</div>
 			</AnimateSharedLayout>
