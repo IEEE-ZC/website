@@ -19,7 +19,6 @@ const WIEPage = () => {
             <WIEIntro WIEIntroProps={WIEIntroProps} />
             <WIEEvents />
             <WIETeam />
-            <Footer />
         </>
     )
 }
