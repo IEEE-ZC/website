@@ -11,6 +11,7 @@ const AboutIntro = ({ AboutIntroProps }) => {
 			<Modal
 				setActiveModal={setActiveModal}
 				activeModal={activeModal}
+				vidSrc='https://www.youtube.com/embed/Fv2-LD0Nbgw'
 			/>
 			<div
 				className='view'
@@ -43,19 +44,6 @@ const AboutIntro = ({ AboutIntroProps }) => {
 												{AboutIntroProps.text}
 											</h5>
 										</li>
-										<div
-											id='ytplayer'
-											style={{ display: 'none' }}
-											className='mt-5'
-										>
-											<iframe
-												width='80%'
-												height='300px'
-												src='https://www.youtube.com/embed/SYlF2_9Zf6w'
-												allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-												allowFullScreen
-											></iframe>
-										</div>
 										<li className='wow fadeIn' data-wow-delay='0.4s'>
 											<Link
 												to='img-text'

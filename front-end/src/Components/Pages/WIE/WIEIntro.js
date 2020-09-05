@@ -10,7 +10,8 @@ const WIEIntro = ({ WIEIntroProps }) => {
         <>
         <Modal
 				setActiveModal={setActiveModal}
-				activeModal={activeModal}
+                activeModal={activeModal}
+                vidSrc='https://www.youtube.com/embed/Fv2-LD0Nbgw'
 			/>
             <div className="view" style={{ height: '100vh', backgroundImage: WIEIntroProps.img }}>
                 <div className="mask rgba-indigo-light">
@@ -30,21 +31,9 @@ const WIEIntro = ({ WIEIntroProps }) => {
                                                 {WIEIntroProps.text}
                                             </h5>
                                         </li>
-                                        <div
-											id='ytplayer2'
-											style={{ display: 'none' }}
-											className='mt-5'
-										>
-											<iframe
-												width='80%'
-												height='300px'
-												src='https://www.youtube.com/embed/SYlF2_9Zf6w'
-												allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-												allowFullScreen
-											></iframe>
-										</div>
+                                       
                                         <li className="wow fadeIn" data-wow-delay="0.4s">
-                                            <Link to="team-members-Wie" smooth={true} duration={1000} className="btn deep-orange pink-gradient btn-rounded btn-lg font-weight-bold">Get Started</Link>
+                                            <Link to="events" smooth={true} duration={1000} className="btn deep-orange pink-gradient btn-rounded btn-lg font-weight-bold">Get Started</Link>
                                         
                                             <button
 												data-toggle='modal'

@@ -9,7 +9,7 @@ const EventsData = [
 const WIEEvents = () => {
     return (
         <>
-            <div className='container'>
+            <div id='events' className='container'>
                 <h1 className='text-center display-1 mb-5 my-5 pt-5 pb-4 font-weight-bold wow fadeIn' data-wow-delay="0.2s">Events</h1>
                 <div className='row d-flex justify-content-center wow fadeIn' data-wow-delay="0.2s">
                     {EventsData.map(el => {

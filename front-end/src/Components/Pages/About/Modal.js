@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react';
 
-const Modal = ({ setActiveModal, activeModal }) => {
+const Modal = ({ setActiveModal, activeModal,vidSrc }) => {
 	return (
 		<div
 			className='modal  fade'
@@ -47,7 +47,7 @@ const Modal = ({ setActiveModal, activeModal }) => {
 							<iframe
 								width='100%'
 								height='400px'
-								src='https://www.youtube.com/embed/SYlF2_9Zf6w'
+								src={vidSrc}
 								allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
 								allowFullScreen
 							></iframe>
