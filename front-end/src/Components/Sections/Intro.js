@@ -3,7 +3,8 @@ import Video from './video.mp4'
 import { Link } from 'react-scroll'
 const Intro = ({ IntroProps: { Slogan } }) => {
     return (
-        <section style={{ height: "100vh" }} className="" id="home">
+        <section style={{ height: "100vh" }} id="home">
+
             <video
                 autoPlay
                 style={{
@@ -18,7 +19,7 @@ const Intro = ({ IntroProps: { Slogan } }) => {
 
             </video>
 
-            <div className="mask rgba-gradient">
+            <div className="mask rgba-black-strong">
 
                 <div style={{ height: "100vh" }} className="container d-flex justify-content-center align-items-center">
 
