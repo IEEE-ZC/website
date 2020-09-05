@@ -114,7 +114,6 @@ const AboutPage = () => {
                 <WhatWeDid WhatWeDidProps={WhatWeDidProps} />
             </div>
             <OurAmazingTeam />
-            <Footer />
         </>
     )
 }

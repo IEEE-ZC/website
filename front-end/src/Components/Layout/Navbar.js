@@ -4,6 +4,8 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { animateScroll as SScroll } from 'react-scroll';
+import './navbar.css';
+
 const Navbar = ({
 	NavbarProps: {
 		Static,
@@ -32,11 +34,10 @@ const Navbar = ({
 						{' '}
 						<img
 							src={LogoBrand2}
-							style={{ width: '90px', height: '60px' }}
+							style={{ height: '60px', objectFit: 'contain' }}
 							className='mine-logo'
 							alt=''
 							id='logoNav'
-							objectfit='contain'
 						/>
 					</Link>
 					<button
@@ -60,9 +61,11 @@ const Navbar = ({
 										return (
 											<li key={element.id} className='nav-item mx-3'>
 												<NavLink
-													className='nav-link'
+													className='nav-link cool-link'
 													exact
-													activeClassName='font-weight-bold'
+													activeClassName={`font-weight-bold 
+													${element.name === 'WIE' ? 'wie-color' : ''}  
+													${element.name === 'Juniors' ? 'juniors-color' : ''} active`}
 													to={element.href}
 												>
 													{element.name}

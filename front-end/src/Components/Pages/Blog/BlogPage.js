@@ -11,6 +11,7 @@ const BlogPage = () => {
 	const { id } = useParams();
 	const [post, setPost] = useState({});
 	const [image, setImage] = useState();
+	
 	useEffect(() => {
 		axios
 			.get(`https://sleepy-falls-48407.herokuapp.com/blog-posts/${id}`)
