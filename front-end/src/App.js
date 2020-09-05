@@ -4,16 +4,18 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+
+// components
 import LandingPage from './Components/LandingPage';
 import AboutPage from './Components/Pages/About/AboutPage';
 import Navbar from './Components/Layout/Navbar';
 import MagazineListPage from './Components/Pages/Magazine/MagazineListPage';
 import BlogListPage from './Components/Pages/Blog/BlogListPage';
-
 import Juniors from './Components/Pages/Juniors/JuniorsPage'
 import WIE from './Components/Pages/WIE/WIEPage'
-
 import BlogPage from './Components/Pages/Blog/BlogPage';
+import MagazinePage from './Components/Pages/Magazine/MagazinePage';
+import Footer from './Components/Layout/Footer';
 
 function App() {
   const NavbarProps = {
@@ -49,11 +51,13 @@ function App() {
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/about" component={AboutPage} />
         <Route exact path='/magazine' component={MagazineListPage} />
+        <Route exact path='/magazine/:id' component={MagazinePage} />
         <Route exact path="/blog" component={BlogListPage} />
         <Route path="/blog/:id" component={BlogPage} />
         <Route exact path="/juniors" component={Juniors} />
         <Route exact path="/WIE" component={WIE} />
       </Switch>
+      <Footer/>
     </Router>
   );
 }

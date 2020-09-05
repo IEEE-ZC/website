@@ -19,8 +19,6 @@ const JuniorsPage = () => {
         <>
             <JuniorIntro JuniorIntroProps={JuniorIntroProps} />
             <JuniorsTeam />
-            <Footer />
-
         </>
     )
 }

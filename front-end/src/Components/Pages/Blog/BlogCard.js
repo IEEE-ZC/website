@@ -109,7 +109,9 @@ const BlogCard = ({
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ delay: 0.1, stiffness: 15 }}
-						onClick={() => history.push({ pathname: `/blog/${page}` })}
+						onClick={() =>
+							history.push({ pathname: `/blog/${page}` })
+						}
 					>
 						Go to blog
 					</motion.div>

@@ -52,14 +52,17 @@
 		$(window).scroll(function () {
 			if (window.innerWidth > 991)
 				$("nav").toggleClass('white', $(this).scrollTop() > 100)
+
 			if ($(this).scrollTop() > 100) {
 				$("nav ul li a").css('color', 'black');
+				$("nav").addClass("z-depth-1");
 				$('.fa-bars').css('color', 'black');
 				$("#logoNav").attr("src", 'https://res.cloudinary.com/strapiieee/image/upload/v1599303256/IEEE_Logo_o54agg.png');
-
 			}
+			
 			if ($(this).scrollTop() < 100 && window.innerWidth > 991) {
 				$("nav ul li a").css('color', 'white');
+				$("nav").removeClass("z-depth-1");
 				$(".fa-bars").removeClass('black');
 				$("#logoNav").attr("src", "https://res.cloudinary.com/strapiieee/image/upload/v1599303256/IEEE_Logo_White_rzntwy.png");
 			}

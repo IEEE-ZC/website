@@ -12,16 +12,11 @@ const BlogListPage = () => {
 
 	useEffect(() => {
 		axios
-			.get('https://sleepy-falls-48407.herokuapp.com/blog-posts')
+			.get('https://sleepy-falls-48407.herokuapp.com/blog-posts?_sort=createdAt')
 			.then((res) => {
-				setPosts(res.data);
-				console.log(res.data);
+				setPosts(res.data.reverse());
 			});
 	}, []);
-
-	useEffect(() => {
-		console.log();
-	}, [index]);
 
 	return (
 		<>
@@ -39,7 +34,7 @@ const BlogListPage = () => {
 									onClick={() => setIndex(index)}
 									image={post.cover[0].url}
 									date={post.updated_by.updatedAt}
-									// author={post.author}
+									author={post.author}
 								/>
 							))}
 					</ul>
@@ -55,6 +50,7 @@ const BlogListPage = () => {
 								content={posts[index].content}
 								image={posts[index].cover[0].url}
 								date={posts[index].updated_by.updatedAt}
+								author={posts[index].author}
 								onDrag={() => setIndex(false)}
 								overlayClick={() => setIndex(false)}
 							/>

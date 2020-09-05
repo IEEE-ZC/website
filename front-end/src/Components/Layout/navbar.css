@@ -1,0 +1,38 @@
+/* colors of sections */
+.wie-color {
+	color: #7b0d84 !important;
+}
+
+.juniors-color {
+	color: #0ba7e0 !important;
+}
+
+/* end of section colors */
+
+.juniors-color::after {
+	background-color: #0ba7e0 !important ;
+}
+.wie-color::after {
+	background-color: #7b0d84 !important ;
+}
+
+.cool-link::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #000;
+	transition: width 0.3s;
+	z-index: 9999999;
+}
+
+.cool-link:hover::after,
+.cool-link.active::after {
+	width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+	.cool-link::after {
+		display: none;
+	}
+}

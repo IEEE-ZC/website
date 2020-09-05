@@ -121,11 +121,16 @@ li {
 
 .button {
 	background-color: #fff;
-	display: flex;
-	justify-content: center;
+	text-align: center;
 	font-size: 1.5rem;
 	font-family: "Roboto";
 	font-weight: 700;
+	cursor: pointer;
+	transition: background-color 150ms ease-in;
+}
+
+.button:hover {
+	background: #ebebeb;
 }
 
 .single-image {
@@ -197,6 +202,16 @@ li {
 		margin: 0;
 		max-height: 50%;
 		overflow: hidden;
+	}
+	
+	.button {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+	}
+
+	.title-container {
+		display: block;
 	}
 }
 
