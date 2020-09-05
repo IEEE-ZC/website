@@ -53,25 +53,55 @@
 		<!-- MDB core JavaScript -->
 		<script type="text/javascript" src="./js/mdb.js"></script>
 
-		<script>
-			$(window).scroll(function () {
-				$('nav').toggleClass('white', $(this).scrollTop() > 100);
-				if ($(this).scrollTop() > 100) {
-					$('nav ul .nav-link').css('color', 'black');
-					$('.fa-bars').addClass('black');
-					$('#logoNav').attr('src', './IEEE_Logo.png');
-				} else {
-					$('nav ul .nav-link').css('color', 'white');
-					$('.fa-bars').removeClass('black');
-					$('#logoNav').attr('src', './IEEE_Logo_White.png');
-				}
-			});
-			$(function () {
-				$('[data-toggle="tooltip"]').tooltip();
-			});
-			$('.carousel').carousel({
-				interval: 500,
-			});
-		</script>
-	</body>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="./js/mdb.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      if (window.innerWidth <= 991) {
+        $('nav').addClass('white');
+        $("#logoNav").attr("src", './IEEE_Logo.png');
+        $('.fa-bars').css('color', 'black');
+        $("nav ul li a").css('color', 'black');
+      }
+    });
+
+    $(window).scroll(function () {
+      if (window.innerWidth > 991)
+        $("nav").toggleClass('white', $(this).scrollTop() > 100)
+      if ($(this).scrollTop() > 100) {
+        $("nav ul li a").css('color', 'black');
+        $('.fa-bars').css('color', 'black');
+        $("#logoNav").attr("src", './IEEE_Logo.png');
+
+      }
+      if ($(this).scrollTop() < 100 && window.innerWidth > 991) {
+        $("nav ul li a").css('color', 'white');
+        $(".fa-bars").removeClass('black');
+        $("#logoNav").attr("src", './IEEE_Logo_White.png');
+      }
+    })
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    $('.carousel').carousel({
+      interval: 500
+    })
+  </script>
+
+</body>
+
 </html>

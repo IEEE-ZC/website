@@ -20,7 +20,7 @@ const Footer = () => {
         console.log(form)
         const config = {
             headers: {
-                method: 'Post',
+                method: 'POST',
                 'Content-Type': 'application/json'
             }
         }
