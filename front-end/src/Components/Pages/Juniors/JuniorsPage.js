@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import JuniorIntro from './JuniorIntro'
 import JuniorsTeam from './JuniorTeam'
-import Footer from '../../Layout/Footer'
+
 import WOW from 'wowjs'
 const JuniorsPage = () => {
 

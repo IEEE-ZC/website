@@ -3,7 +3,7 @@ import WIEIntro from './WIEIntro'
 import WIETeam from './WIETeam'
 import WIEEvents from './WIEEvents'
 import WOW from 'wowjs'
-import Footer from '../../Layout/Footer'
+
 const WIEPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
