@@ -13,6 +13,11 @@ const MagazinePage = () => {
 	const [image, setImage] = useState();
 
 	useEffect(() => {
+        window.scrollTo(0, 0);
+        document.title = "IEEE| Magazine";
+       
+    }, []);
+	useEffect(() => {
 		axios
 			.get(`https://sleepy-falls-48407.herokuapp.com/magazines/${id}`)
 			.then((res) => {

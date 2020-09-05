@@ -13,6 +13,11 @@ const BlogPage = () => {
 	const [image, setImage] = useState();
 	
 	useEffect(() => {
+        window.scrollTo(0, 0);
+        document.title = "IEEE| BLog";
+       
+    }, []);
+	useEffect(() => {
 		axios
 			.get(`https://sleepy-falls-48407.herokuapp.com/blog-posts/${id}`)
 			.then((res) => {
