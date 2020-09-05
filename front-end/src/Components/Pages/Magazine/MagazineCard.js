@@ -26,11 +26,20 @@ const MagazineCard = ({
 					overflow: 'hidden',
 				}}
 			>
-				<motion.img
-					className='card-img-top img-fluid'
-					src={image}
-					alt='Card'
-				/>
+				<div style={{ overflow: 'hidden' }}>
+					<motion.img
+						className='card-img-top img-fluid'
+						whileHover={{
+							scale: 1.22,
+							rotate: 5,
+							filter: 'brightness(0.7)',
+						}}
+						initial={{ scale: 1, rotate: 0, filter: 'brightness(1)',  }}
+						transition={{ type: 'spring', stiffness: 150 }}
+						src={image}
+						alt='Card'
+					/>
+				</div>
 				<div className='card-body'>
 					<h4 className='card-title m-0 text-center'>
 						<strong>{title}</strong>
