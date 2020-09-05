@@ -37,7 +37,13 @@ const BlogCard = ({
 							className={style['card-image-container']}
 							layoutId={`image-container-${id}`}
 						>
-							<img
+							<motion.img
+								whileHover={{
+									scale: 1.22,
+									rotate: 5,
+									filter: 'brightness(0.7)',
+								}}
+								transition={{ type: 'spring', stiffness: 150 }}
 								className={style['card-image']}
 								src={image}
 								alt=''
