@@ -1,10 +1,16 @@
-import React from 'react'
+/* eslint-disable jsx-a11y/iframe-has-title */
+import React, { useState } from 'react'
 import { Link } from 'react-scroll'
-
+import Modal from '../About/Modal'
 const JuniorIntro = ({ JuniorIntroProps }) => {
+    const [activeModal, setActiveModal] = useState(false);
     return (
         <>
-            
+            <Modal
+                setActiveModal={setActiveModal}
+                activeModal={activeModal}
+            />
+
             <div className="view" style={{ height: '100vh', backgroundImage: JuniorIntroProps.img }}>
                 <div className="mask rgba-indigo-light">
                     <div className="container h-100 d-flex justify-content-center align-items-center">
@@ -23,8 +29,34 @@ const JuniorIntro = ({ JuniorIntroProps }) => {
                                                 {JuniorIntroProps.text}
                                             </h5>
                                         </li>
+
+                                        <div
+                                            id='ytplayer2'
+                                            style={{ display: 'none' }}
+                                            className='mt-5'
+                                        >
+                                            <iframe
+                                                width='80%'
+                                                height='300px'
+                                                src='https://www.youtube.com/embed/SYlF2_9Zf6w'
+                                                allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+                                                allowFullScreen
+                                            ></iframe>
+                                        </div>
                                         <li className="wow fadeIn" data-wow-delay="0.4s">
                                             <Link to="testimonials" smooth={true} duration={1000} className="btn deep-orange pink-gradient btn-rounded btn-lg font-weight-bold">Get Started</Link>
+                                            <button
+                                                data-toggle='modal'
+                                                data-target='#centralModal'
+                                                className='btn btn-white btn-rounded btn-lg   font-weight-bold ml-lg-0'
+                                                onClick={() => setActiveModal(true)}
+                                            >
+                                                <i
+                                                    className='fas fa-play-circle orange-text mr-2'
+                                                    aria-hidden='true'
+                                                ></i>{' '}
+												Video
+											</button>
                                         </li>
                                     </ul>
                                 </div>
