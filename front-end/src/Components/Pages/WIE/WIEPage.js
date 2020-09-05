@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import WIEIntro from './WIEIntro'
 import WIETeam from './WIETeam'
+import WIEEvents from './WIEEvents'
 import WOW from 'wowjs'
 import Footer from '../../Layout/Footer'
 const WIEPage = () => {
@@ -16,6 +17,7 @@ const WIEPage = () => {
     return (
         <>
             <WIEIntro WIEIntroProps={WIEIntroProps} />
+            <WIEEvents />
             <WIETeam />
             <Footer />
         </>

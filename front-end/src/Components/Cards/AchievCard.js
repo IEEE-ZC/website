@@ -1,11 +1,11 @@
 import React from 'react'
 
-const AchievCard = ({ card }) => {
+const AchievCard = ({ card, cardHeight }) => {
     return (
         <div className="col-md-6 col-sm-12 mb-4 mt-5  wow fadeInUp" data-wow-delay="0.2s">
 
             {/* <!-- Card --> */}
-            <div style={{ height: '700px' }} className="card card-cascade hoverable">
+            <div style={{ height: cardHeight ? cardHeight : '700px' }} className="card card-cascade hoverable">
 
                 {/* <!-- Card image --> */}
                 <div className="view view-cascade overlay">
