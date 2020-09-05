@@ -58,21 +58,21 @@ const Navbar = ({
 						<ul className='ml-5  navbar-nav mr-auto smooth-scroll'>
 							{Static
 								? NavItems.map((element) => {
-										return (
-											<li key={element.id} className='nav-item mx-3'>
-												<NavLink
-													className='nav-link cool-link'
-													exact
-													activeClassName={`font-weight-bold 
+									return (
+										<li key={element.id} className='nav-item mx-3'>
+											<NavLink
+												className='nav-link cool-link'
+												exact
+												activeClassName={`font-weight-bold 
 													${element.name === 'WIE' ? 'wie-color' : ''}  
 													${element.name === 'Juniors' ? 'juniors-color' : ''} active`}
-													to={element.href}
-												>
-													{element.name}
-												</NavLink>
-											</li>
-										);
-								  })
+												to={element.href}
+											>
+												{element.name}
+											</NavLink>
+										</li>
+									);
+								})
 								: null}
 						</ul>
 						{isSearchable === true ? (
@@ -92,13 +92,14 @@ const Navbar = ({
 								{socialAccounts.map((el) => {
 									return (
 										<li key={el.website} className='nav-item'>
-											<a
+											{el.website === 'fas fa-envelope' ? <a className='nav-link' href={`mailto:${el.href}`}><i className={`fa-2x ${el.website}`}></i></a> : <a
 												target='_blank'
 												href={el.href}
 												className='nav-link'
 											>
 												<i className={`fa-2x ${el.website}`}></i>
-											</a>
+											</a>}
+
 										</li>
 									);
 								})}
