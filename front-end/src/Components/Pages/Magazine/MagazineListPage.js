@@ -45,7 +45,7 @@ const MagazineListPage = () => {
 	return (
 		<>
 			<AnimatePresence>{loading && <Preloader />}</AnimatePresence>
-			<Header heading='IEEE MAGAZINE' />
+			<Header darken heading='IEEE MAGAZINE' image="https://res.cloudinary.com/strapiieee/image/upload/v1599399592/medium_DSC_2133es_Recovered_74c29a0502.jpg" />
 			<main>
 				<div className='container my-5'>
 					<div className='row'>
