@@ -11,7 +11,7 @@ const WIEPage = () => {
         new WOW.WOW().init();
     }, []);
     const WIEIntroProps = {
-        img: "url(./imgs/WIE/WIE.jpg)",
+        img: "url(./imgs/WIE/WIE.png)",
         text: "Wie Affinity Group at IEEE Zewail City branch uses the Zewail City community and the perception of technology Zewailians have to put the technology in the hands of women who want, can, and hope to use it. Wie reach those who can’t reach us and enable those who can to hone their skills and empower them to lead a better future."
     }
     return (
