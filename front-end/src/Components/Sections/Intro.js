@@ -1,5 +1,4 @@
 import React from 'react'
-import Video from './video.mp4'
 import { Link } from 'react-scroll'
 const Intro = ({ IntroProps: { Slogan } }) => {
     return (
@@ -15,7 +14,7 @@ const Intro = ({ IntroProps: { Slogan } }) => {
                     zIndex: "-1"
                 }} muted loop>
 
-                <source src={Video} type="video/mp4" />
+                <source src="https://res.cloudinary.com/strapiieee/video/upload/v1599403547/video_aw6glz.mp4" type="video/mp4" />
 
             </video>
 
