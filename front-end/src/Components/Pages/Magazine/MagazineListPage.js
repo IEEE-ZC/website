@@ -1,21 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
-
+// components
 import Header from '../../Layout/Header';
 import MagazineCard from './MagazineCard';
+import Preloader from '../../Layout/Preloader'
+
+// API endpoint
+import { MAGAZINE } from '../../../EndPoints';
 
 const MagazineListPage = () => {
 	let history = useHistory();
 	const [magazines, setMagazines] = useState([]);
+	const [loading, setLoading] = useState(true);
+
 
 	useEffect(() => {
 		axios
-			.get('https://sleepy-falls-48407.herokuapp.com/magazines?_sort=createdAt')
+			.get(`${MAGAZINE}?_sort=createdAt`)
 			.then((res) => {
 				setMagazines(res.data.reverse());
+				setLoading(false);
 			});
 	}, []);
 
@@ -37,9 +44,10 @@ const MagazineListPage = () => {
 
 	return (
 		<>
+			<AnimatePresence>{loading && <Preloader />}</AnimatePresence>
 			<Header heading='IEEE MAGAZINE' />
 			<main>
-				<div className='container mt-5'>
+				<div className='container my-5'>
 					<div className='row'>
 						<div className='col-xl-12 col-lg-12 col-md-12'>
 							<section>

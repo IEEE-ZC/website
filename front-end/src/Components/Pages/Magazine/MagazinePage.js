@@ -1,34 +1,36 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
-import Header from '../../Layout/Header';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import Moment from 'react-moment';
 import MarkdownPreview from '@uiw/react-markdown-preview';
+import { AnimatePresence } from 'framer-motion';
 
-import axios from 'axios';
+// components
+import Preloader from '../../Layout/Preloader';
+import Header from '../../Layout/Header';
+import { MAGAZINE } from '../../../EndPoints';
 
 const MagazinePage = () => {
 	const { id } = useParams();
 	const [magazine, setMagazine] = useState({});
 	const [image, setImage] = useState();
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-        window.scrollTo(0, 0);
-        document.title = "IEEE| Magazine";
-       
-    }, []);
-	useEffect(() => {
-		axios
-			.get(`https://sleepy-falls-48407.herokuapp.com/magazines/${id}`)
-			.then((res) => {
-				setMagazine(res.data);
-				setImage(res.data.cover.url);
-				console.log(res.data.createdAt);
-			});
+		window.scrollTo(0, 0);
+		document.title = 'IEEE| Magazine';
+
+		axios.get(`${MAGAZINE}/${id}`).then((res) => {
+			setMagazine(res.data);
+			setImage(res.data.cover.url);
+			setLoading(false);
+		});
 	}, []);
 
 	return (
 		<>
+			<AnimatePresence>{loading && <Preloader />}</AnimatePresence>
 			<Header image={image} darken />
 			<main>
 				<div className='container-fluid mb-5'>
@@ -88,7 +90,10 @@ const MagazinePage = () => {
 														</div>
 													</div>
 													<div className='row mt-3'>
-														<button className='btn btn-info waves-block'>
+														<button
+															className='btn btn-info waves-block w-100 p-4 font-weight-bold'
+															style={{ fontSize: 18 }}
+														>
 															Download Magazine
 														</button>
 													</div>
