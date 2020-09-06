@@ -1,33 +1,39 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
-import Header from '../../Layout/Header';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import Moment from 'react-moment';
 import MarkdownPreview from '@uiw/react-markdown-preview';
+import { AnimatePresence } from 'framer-motion';
 
-import axios from 'axios';
+// components
+import Header from '../../Layout/Header';
+import Preloader from '../../Layout/Preloader';
 
 const BlogPage = () => {
 	const { id } = useParams();
 	const [post, setPost] = useState({});
 	const [image, setImage] = useState();
-	
+	const [loading, setLoading] = useState(true);
+
 	useEffect(() => {
-        window.scrollTo(0, 0);
-        document.title = "IEEE| BLog";
-       
-    }, []);
-	useEffect(() => {
+		window.scrollTo(0, 0);
+		document.title = 'IEEE| BLog';
+
 		axios
-			.get(`https://sleepy-falls-48407.herokuapp.com/blog-posts/${id}`)
+			.get(
+				`https://sleepy-falls-48407.herokuapp.com/blog-posts/${id}`
+			)
 			.then((res) => {
-        setPost(res.data);
-        setImage(res.data.cover[0].url)
+				setPost(res.data);
+				setImage(res.data.cover[0].url);
+				setLoading(false);
 			});
 	}, []);
 
 	return (
 		<>
+			<AnimatePresence>{loading && <Preloader />}</AnimatePresence>
 			<Header image={image} darken />
 			<main>
 				<div className='container-fluid mb-5'>
@@ -58,7 +64,14 @@ const BlogPage = () => {
 													<div className='row mt-3'>
 														{/* <ReactMarkdown source={post.content} /> */}
 														{/* <MDReactComponent text="Some **bold** and *italic* texts" />    */}
-														<MarkdownPreview source={post.content} disallowedTypes={['image','code', 'list']} />
+														<MarkdownPreview
+															source={post.content}
+															disallowedTypes={[
+																'image',
+																'code',
+																'list',
+															]}
+														/>
 													</div>
 												</form>
 											</div>

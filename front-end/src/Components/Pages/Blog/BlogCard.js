@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom';
 import { useWindowSize } from 'react-use';
 import markdownToTxt from 'markdown-to-txt';
 
+// style
 import style from './style.module.css';
 
 const BlogCard = ({
@@ -53,7 +54,12 @@ const BlogCard = ({
 							className={style['title-container']}
 							layoutId={`title-container-${id}`}
 						>
-							<h2 className={style['whiteh2']}>{title}</h2>
+							<motion.h2
+								layoutId={`text-${id}`}
+								className={style['whiteh2']}
+							>
+								{title}
+							</motion.h2>
 							<Moment
 								date={date}
 								toNow
@@ -73,8 +79,6 @@ const BlogCard = ({
 				<motion.div
 					className={style['card-content']}
 					layoutId={`card-container-${id}`}
-					// conditional rendering props when the screen is under 800 px
-					// ondrag function will be invoked to mobile users
 					drag={width < 1000 ? 'x' : null}
 					layout={width < 1000 ? true : null}
 					onDragStart={width < 1000 ? onDrag : null}
@@ -89,7 +93,12 @@ const BlogCard = ({
 						className={style['title-container']}
 						layoutId={`title-container-${id}`}
 					>
-						<h2 className={style['whiteh2']}>{title}</h2>
+						<motion.h2
+							layoutId={`text-${id}`}
+							className={style['whiteh2']}
+						>
+							{title}
+						</motion.h2>
 						<Moment date={date} toNow className={style['whiteh2']} />
 					</motion.div>
 					<motion.div
@@ -98,15 +107,15 @@ const BlogCard = ({
 						animate={{ y: 0, opacity: 1 }}
 					>
 						<MarkdownPreview
-							source={contentText.slice(0, 200)}
+							source={contentText.slice(0, 400) + '...'}
+							style={{ overflow: 'hidden' }}
 							unwrapDisallowed={true}
 							disallowedTypes={[
 								'image',
 								'code',
+								'link',
 								'inlineCode',
 								'list',
-								'heading',
-								'paragraph',
 							]}
 						/>
 					</motion.div>
