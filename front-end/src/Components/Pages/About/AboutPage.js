@@ -30,54 +30,61 @@ const AboutPage = () => {
         navList: [
             {
                 ID: 1, href: "panel31", item: "2014",
-                Imgs: ["/imgs/about/WhatWeDid/2014.jpg"]
+                Imgs: [{ src: "/imgs/about/WhatWeDid/2014.jpg", text: "Students visited Altaybat Farm, where they were divided into groups to explore the Karm Solar Company. They learned in both a fruitful and fun manner about the innovative off-grid solar energy solutions and the most recent companies." }]
             },
             {
                 ID: 2, href: "panel32", item: "2015",
                 Imgs: [
-                    "/imgs/about/WhatWeDid/2015_1.jpg",
-                    "/imgs/about/WhatWeDid/2015_2.jpg",
+                    { src: "/imgs/about/WhatWeDid/2015_1.jpg", text: "Zewail city students had the opportunity to visit the training center of Egypt Air where they were given a lecture and demonstration for the training of the crew on how to do their job in a small prototype of an airbus." },
+                    { src: "/imgs/about/WhatWeDid/2015_2.jpg", text: "ICMIS is an annual conference held in February. The international conference gathers people from all over the globe, from India to South Africa." },
                 ]
+
+
             },
             {
                 ID: 3, href: "panel33", item: "2016",
                 Imgs: [
-                    "/imgs/about/WhatWeDid/2016_1.jpg",
-                    "/imgs/about/WhatWeDid/2016_2.jpg",
-                    "/imgs/about/WhatWeDid/2016_3.jpg",
+                    { src: "/imgs/about/WhatWeDid/2016_1.jpg", text: "AppX is the event aimed at raising interest in wearable technology via sessions about what is wearable technology, embedded systems, Sensory substitution and other topics" },
+                    { src: "/imgs/about/WhatWeDid/2016_2.jpg", text: "The International Conference on Mathematics and Information Sciences is a platform for the latest and most important developments in the field of pure and applied mathematics." },
+                    { src: "/imgs/about/WhatWeDid/2016_3.jpg", text: "In celebration of the 5th anniversary of the African Network for Solar Energy (ANSOLE), Zewail city of science and technology hosted the fifth international conference on renewable energy. The conference aimed to provide an environment for the discussion and dissemination of research in all aspects of renewable energy devices and systems." },
                 ]
             },
             {
                 ID: 4, href: "panel34", item: "2017",
                 Imgs: [
-                    "/imgs/about/WhatWeDid/2017_1.jpg",
-                    "/imgs/about/WhatWeDid/2017_2.jpg",
-                    "/imgs/about/WhatWeDid/2017_3.jpg",
+                    { src: "/imgs/about/WhatWeDid/2017_1.jpg", text: "In this camp, Engineer AbdurRahman ElGammal who is the owner of the American company MeNooN LLC for training and is very known for his creative technical training that takes students from zero computer knowledge to the top programmers, provided more than 150 engineers with his experience in competitive programming." },
+                    { src: "/imgs/about/WhatWeDid/2017_2.jpg", text: "After the success of AppX: From Humans to Cyborgs last year, we've decided to recreate it again! This year's theme will be about Biomedical Engineering especially the neuro-engineering projects." },
+                    { src: "/imgs/about/WhatWeDid/2017_3.jpg", text: "Future Engineers camp was an ingenious way to provide knowledge in the fields of programming, electronics control principles and mechanics." },
                 ]
             },
             {
                 ID: 5, href: "panel35", item: "2018",
                 Imgs: [
-                    "/imgs/about/WhatWeDid/2018_1.jpg",
-                    "/imgs/about/WhatWeDid/2018_2.jpg",
-                    "/imgs/about/WhatWeDid/2018_3.jpg",
+                    { src: "/imgs/about/WhatWeDid/2018_1.jpg", text: "To introduce the audience to how AI is applied in robotics and teach them to differentiate between what’s real and what’s science fiction. The event had a number of talks from respectable presenters, multiple workshops held by the branch's Engineering members, Projects made by the branch's Engineering members, and and Exhibition area for different companies and entities to present their products" },
+                    { src: "/imgs/about/WhatWeDid/2018_2.jpg", text: "This was the first instance of this competition in Egypt, where students from different universities would build their robots to compete in a race." },
+                    { src: "/imgs/about/WhatWeDid/2018_3.jpg", text: "" },
                 ]
             },
             {
                 ID: 6, href: "panel36", item: "Show All", active: "active",
                 Imgs: [
-                    "/imgs/about/WhatWeDid/2014.jpg",
-                    "/imgs/about/WhatWeDid/2015_1.jpg",
-                    "/imgs/about/WhatWeDid/2015_2.jpg",
-                    "/imgs/about/WhatWeDid/2016_1.jpg",
-                    "/imgs/about/WhatWeDid/2016_2.jpg",
-                    "/imgs/about/WhatWeDid/2016_3.jpg",
-                    "/imgs/about/WhatWeDid/2017_1.jpg",
-                    "/imgs/about/WhatWeDid/2017_2.jpg",
-                    "/imgs/about/WhatWeDid/2017_3.jpg",
-                    "/imgs/about/WhatWeDid/2018_1.jpg",
-                    "/imgs/about/WhatWeDid/2018_2.jpg",
-                    "/imgs/about/WhatWeDid/2018_3.jpg",
+                    { src: "/imgs/about/WhatWeDid/2014.jpg", text: "Students visited Altaybat Farm, where they were divided into groups to explore the Karm Solar Company. They learned in both a fruitful and fun manner about the innovative off-grid solar energy solutions and the most recent companies." },
+                    
+                    { src: "/imgs/about/WhatWeDid/2015_1.jpg", text: "Zewail city students had the opportunity to visit the training center of Egypt Air where they were given a lecture and demonstration for the training of the crew on how to do their job in a small prototype of an airbus." },
+                    { src: "/imgs/about/WhatWeDid/2015_2.jpg", text: "ICMIS is an annual conference held in February. The international conference gathers people from all over the globe, from India to South Africa." },
+            
+                    { src: "/imgs/about/WhatWeDid/2016_1.jpg", text: "AppX is the event aimed at raising interest in wearable technology via sessions about what is wearable technology, embedded systems, Sensory substitution and other topics" },
+                    { src: "/imgs/about/WhatWeDid/2016_2.jpg", text: "The International Conference on Mathematics and Information Sciences is a platform for the latest and most important developments in the field of pure and applied mathematics." },
+                    { src: "/imgs/about/WhatWeDid/2016_3.jpg", text: "In celebration of the 5th anniversary of the African Network for Solar Energy (ANSOLE), Zewail city of science and technology hosted the fifth international conference on renewable energy. The conference aimed to provide an environment for the discussion and dissemination of research in all aspects of renewable energy devices and systems." },
+            
+                    { src: "/imgs/about/WhatWeDid/2017_1.jpg", text: "In this camp, Engineer AbdurRahman ElGammal who is the owner of the American company MeNooN LLC for training and is very known for his creative technical training that takes students from zero computer knowledge to the top programmers, provided more than 150 engineers with his experience in competitive programming." },
+                    { src: "/imgs/about/WhatWeDid/2017_2.jpg", text: "After the success of AppX: From Humans to Cyborgs last year, we've decided to recreate it again! This year's theme will be about Biomedical Engineering especially the neuro-engineering projects." },
+                    { src: "/imgs/about/WhatWeDid/2017_3.jpg", text: "Future Engineers camp was an ingenious way to provide knowledge in the fields of programming, electronics control principles and mechanics." },
+                
+                    { src: "/imgs/about/WhatWeDid/2018_1.jpg", text: "To introduce the audience to how AI is applied in robotics and teach them to differentiate between what’s real and what’s science fiction. The event had a number of talks from respectable presenters, multiple workshops held by the branch's Engineering members, Projects made by the branch's Engineering members, and and Exhibition area for different companies and entities to present their products" },
+                    { src: "/imgs/about/WhatWeDid/2018_2.jpg", text: "This was the first instance of this competition in Egypt, where students from different universities would build their robots to compete in a race." },
+                    { src: "/imgs/about/WhatWeDid/2018_3.jpg", text: "" },
+                
                 ]
             },
         ]

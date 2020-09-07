@@ -28,9 +28,13 @@ const WhatWeDid = ({ WhatWeDidProps }) => {
                                 <div className="row d-flex justify-content-around">
                                     {el.Imgs ? el.Imgs.map(img => {
                                         return (<div key={img} className="col-lg-4 col-md-6 mb-5">
-                                            <div className="view overlay z-depth-1 zoom">
-                                                <img alt="..." src={img}
+                                            <div className="view overlay  zoom">
+                                                <img alt="..." src={img.src}
                                                     className="img-fluid" />
+                                                <div className="mask  waves-effect waves-light">
+                                                    <p className="text-center font-weight-bold flex-center white-text">{img.text}</p>
+                                                </div>
+
                                             </div>
                                         </div>)
                                     }) : null}
