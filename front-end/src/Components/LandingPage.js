@@ -50,11 +50,7 @@ const LandingPage = () => {
 
         ]
     }
-    // if (Load) {
-    //     return (
-    //         <Preloader />
-    //     )
-    // }
+   
     return (
         <>
             <AnimatePresence>{loading && <Preloader />}</AnimatePresence>

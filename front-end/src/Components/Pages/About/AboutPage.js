@@ -30,54 +30,54 @@ const AboutPage = () => {
         navList: [
             {
                 ID: 1, href: "panel31", item: "2014",
-                Imgs: ["/imgs/about/WhatWeDid/2014.png"]
+                Imgs: ["/imgs/about/WhatWeDid/2014.jpg"]
             },
             {
                 ID: 2, href: "panel32", item: "2015",
                 Imgs: [
-                    "/imgs/about/WhatWeDid/2015_1.png",
-                    "/imgs/about/WhatWeDid/2015_2.png",
+                    "/imgs/about/WhatWeDid/2015_1.jpg",
+                    "/imgs/about/WhatWeDid/2015_2.jpg",
                 ]
             },
             {
                 ID: 3, href: "panel33", item: "2016",
                 Imgs: [
-                    "/imgs/about/WhatWeDid/2016_1.png",
-                    "/imgs/about/WhatWeDid/2016_2.png",
-                    "/imgs/about/WhatWeDid/2016_3.png",
+                    "/imgs/about/WhatWeDid/2016_1.jpg",
+                    "/imgs/about/WhatWeDid/2016_2.jpg",
+                    "/imgs/about/WhatWeDid/2016_3.jpg",
                 ]
             },
             {
                 ID: 4, href: "panel34", item: "2017",
                 Imgs: [
-                    "/imgs/about/WhatWeDid/2017_1.png",
-                    "/imgs/about/WhatWeDid/2017_2.png",
-                    "/imgs/about/WhatWeDid/2017_3.png",
+                    "/imgs/about/WhatWeDid/2017_1.jpg",
+                    "/imgs/about/WhatWeDid/2017_2.jpg",
+                    "/imgs/about/WhatWeDid/2017_3.jpg",
                 ]
             },
             {
                 ID: 5, href: "panel35", item: "2018",
                 Imgs: [
-                    "/imgs/about/WhatWeDid/2018_1.png",
-                    "/imgs/about/WhatWeDid/2018_2.png",
-                    "/imgs/about/WhatWeDid/2018_3.png",
+                    "/imgs/about/WhatWeDid/2018_1.jpg",
+                    "/imgs/about/WhatWeDid/2018_2.jpg",
+                    "/imgs/about/WhatWeDid/2018_3.jpg",
                 ]
             },
             {
                 ID: 6, href: "panel36", item: "Show All", active: "active",
                 Imgs: [
-                    "/imgs/about/WhatWeDid/2014.png",
-                    "/imgs/about/WhatWeDid/2015_1.png",
-                    "/imgs/about/WhatWeDid/2015_2.png",
-                    "/imgs/about/WhatWeDid/2016_1.png",
-                    "/imgs/about/WhatWeDid/2016_2.png",
-                    "/imgs/about/WhatWeDid/2016_3.png",
-                    "/imgs/about/WhatWeDid/2017_1.png",
-                    "/imgs/about/WhatWeDid/2017_2.png",
-                    "/imgs/about/WhatWeDid/2017_3.png",
-                    "/imgs/about/WhatWeDid/2018_1.png",
-                    "/imgs/about/WhatWeDid/2018_2.png",
-                    "/imgs/about/WhatWeDid/2018_3.png",
+                    "/imgs/about/WhatWeDid/2014.jpg",
+                    "/imgs/about/WhatWeDid/2015_1.jpg",
+                    "/imgs/about/WhatWeDid/2015_2.jpg",
+                    "/imgs/about/WhatWeDid/2016_1.jpg",
+                    "/imgs/about/WhatWeDid/2016_2.jpg",
+                    "/imgs/about/WhatWeDid/2016_3.jpg",
+                    "/imgs/about/WhatWeDid/2017_1.jpg",
+                    "/imgs/about/WhatWeDid/2017_2.jpg",
+                    "/imgs/about/WhatWeDid/2017_3.jpg",
+                    "/imgs/about/WhatWeDid/2018_1.jpg",
+                    "/imgs/about/WhatWeDid/2018_2.jpg",
+                    "/imgs/about/WhatWeDid/2018_3.jpg",
                 ]
             },
         ]
