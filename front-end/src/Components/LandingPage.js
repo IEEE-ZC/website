@@ -60,7 +60,7 @@ const LandingPage = () => {
             <AnimatePresence>{loading && <Preloader />}</AnimatePresence>
             <Intro IntroProps={IntroProps} />
             <Events />
-            <ScrollSpy Items={ScrollSpyItems.NavItems} />
+            {!loading && <ScrollSpy Items={ScrollSpyItems.NavItems} />}
             <Achievements />
             <About AboutProps={AboutProps} />
             <CoreValue />
