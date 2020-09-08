@@ -6,22 +6,37 @@
 import React, { useState } from 'react';
 import { CONTACT_US } from '../../EndPoints';
 import axios from 'axios';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
 const Footer = () => {
+	const MySwal = withReactContent(Swal);
 	const [form, setForm] = useState({
 		name: '',
 		email: '',
 		subject: '',
 		content: '',
 	});
+	const { name, email, subject, content } = form;
 	const onChange = (e) =>
 		setForm({ ...form, [e.target.name]: e.target.value });
 
 	const onSubmit = (e) => {
 		e.preventDefault();
-		console.log(form);
 		axios
 			.post(CONTACT_US, form)
-			.then((res) => console.log(res))
+			.then(res => {
+				MySwal.fire(
+					`Your Message  ${res.data.subject}  has already been sent`,
+					'We will communicate soon 😃',
+					'success');
+				setForm({
+					name: '',
+					email: '',
+					subject: '',
+					content: '',
+				});
+			})
 			.catch((err) => console.log(err));
 	};
 	return (
@@ -52,6 +67,7 @@ const Footer = () => {
 												required
 												id='form3'
 												className='form-control'
+												value={name}
 											/>
 											<label htmlFor='form3'>Your Name</label>
 										</div>
@@ -64,6 +80,7 @@ const Footer = () => {
 												required
 												id='form2'
 												className='form-control'
+												value={email}
 											/>
 											<label htmlFor='form2'>Your Email</label>
 										</div>
@@ -76,6 +93,7 @@ const Footer = () => {
 												type='text'
 												id='form32'
 												className='form-control'
+												value={subject}
 											/>
 											<label htmlFor='form32'>Subject</label>
 										</div>
@@ -89,12 +107,13 @@ const Footer = () => {
 												id='form8'
 												className='md-textarea form-control'
 												rows='3'
+												value={content}
 											></textarea>
 											<label htmlFor='form8'> Your Message</label>
 										</div>
 
 										<div className='text-center'>
-											<button className='btn btn-rounded btn-outline-blue waves-effect'>
+											<button onclick="toastr.success('Hi! I am success message.');" className='btn btn-rounded btn-outline-blue waves-effect'>
 												Send <i className='far fa-paper-plane'></i>
 											</button>
 										</div>
