@@ -6,19 +6,11 @@ const EventsData = [
     {
         id: '1', title: `AppX20': Shape the Future`,
         text: 'Here is the annual event comes again after a lot of waiting. Thanks to every member this is one of the most appreciated events in the history of the university!',
-        date: '20-11-2020', imgSource: './imgs/events/appx.jpg', eventLinks: [
-            { class: "fa-ic", website: "facebook", link: "https://www.facebook.com/" },
-            { class: "li-ic", website: "linkedin-in", link: "https://www.linkedin.com/" },
-            { class: "tw-ic", website: "twitter", link: "https://twitter.com/" }
-        ]
+        date: '10 - 10 - 2020', imgSource: './imgs/events/appx.jpg' 
     },
     {
         id: '2', title: `Crisis Engineering Management - CEC20`, text: 'IEEE Zewail City is hosting the Crisis Engineering Contest to connect civil society, mentors, developers, analytic engineers, innovators, and other related fields to develop new.',
-        date: '20-11-2020', imgSource: './imgs/events/cec.jpg', eventLinks: [
-            { class: "fa-ic", website: "facebook", link: "https://www.facebook.com/" },
-            { class: "li-ic", website: "linkedin-in", link: "https://www.linkedin.com/" },
-            { class: "tw-ic", website: "twitter", link: "https://twitter.com/" }
-        ]
+        date: '27 - 6 - 2020', imgSource: './imgs/events/cec.jpg'
     }
 ];
 const Events = () => {
