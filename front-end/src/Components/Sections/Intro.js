@@ -14,7 +14,7 @@ const Intro = ({ IntroProps: { Slogan } }) => {
                     zIndex: "-1"
                 }} muted loop>
 
-                <source src="https://res.cloudinary.com/strapiieee/video/upload/v1599403547/video_aw6glz.mp4" type="video/mp4" />
+                <source src="https://res.cloudinary.com/strapiieee/video/upload/v1599553298/Intro_video_2_1_kug0gh.mp4" type="video/mp4" />
 
             </video>
 
