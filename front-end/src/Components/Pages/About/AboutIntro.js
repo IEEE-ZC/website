@@ -18,11 +18,12 @@ const AboutIntro = ({ AboutIntroProps }) => {
 				style={{
 					height: '100vh',
 					backgroundImage: AboutIntroProps.img,
+					filter: 'brightness(0.9)',
 					backgroundSize: 'cover',
 					backgroundPosition: 'center',
 				}}
 			>
-				<div className='mask rgba-indigo-light'>
+				<div className='mask rgba-black-light'>
 					<div className='container h-100 d-flex justify-content-center align-items-center'>
 						<div className='row pt-5 mt-3'>
 							<div className='col-md-12 wow fadeIn mb-3'>
