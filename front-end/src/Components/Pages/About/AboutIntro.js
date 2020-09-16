@@ -1,6 +1,7 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
+
+// Components
 import Modal from './Modal';
 
 const AboutIntro = ({ AboutIntroProps }) => {

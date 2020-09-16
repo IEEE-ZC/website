@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import WOW from 'wowjs';
 
 // components
 import Events from './Sections/Events';
@@ -12,7 +12,6 @@ import ScrollSpy from './Sections/ScrollSpy';
 import Intro from './Sections/Intro';
 import Preloader from '../Components/Layout/Preloader';
 
-import WOW from 'wowjs';
 const LandingPage = () => {
 	const [loading, setLoading] = useState(true);
 
@@ -21,21 +20,23 @@ const LandingPage = () => {
 		document.title = 'IEEE| Home';
 		new WOW.WOW().init();
 
-		window.addEventListener('load', function () {
+		setTimeout(() => {
 			setLoading(false);
-		});
+		}, 2500);
 	}, []);
-
 
 	const IntroProps = {
 		Slogan: 'Building Community',
 	};
+
 	const AboutProps = {
 		title: 'A Glimpse',
 		text:
 			" When a leader, be a serving bottle that flows into others' cups. You have the responsibility of filling your bottle with sufficient knowledge to flow it into their cups, and when you do; knowledge will prevail in the whole team. ",
-		img: './imgs/glimpse/glimpse.jpg',
+		img:
+			'https://res.cloudinary.com/ieeezc/image/upload/v1600273223/glimpse_yczajc.jpg',
 	};
+
 	const ScrollSpyItems = {
 		NavItems: [
 			{ id: 1, name: 'Home', href: 'home' },

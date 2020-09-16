@@ -54,6 +54,7 @@ const JuniorTeam = () => {
 																	style={{
 																		width: '160px',
 																		height: '160px',
+																		objectFit: 'cover',
 																	}}
 																	src={el.image.name}
 																	className='rounded-circle img-fluid'
