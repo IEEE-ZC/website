@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/img-redundant-alt */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import axios from 'axios';
@@ -52,7 +49,7 @@ const OurAmazingTeam = () => {
 													<img
 														src={el.image[0].name}
 														className='rounded z-depth-1'
-														alt='First sample avatar image'
+														alt='First sample avatar'
 													/>
 												</div>
 											</div>

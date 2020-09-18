@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -26,7 +25,7 @@ const MagazinePage = () => {
 			setImage(res.data.cover.url);
 			setLoading(false);
 		});
-	}, []);
+	}, [id]);
 
 	return (
 		<>
@@ -59,45 +58,41 @@ const MagazinePage = () => {
 
 										<div className='row pt-5'>
 											<div className='col-md-12 col-xl-12'>
-												<form>
-													<div className='row mt-3'>
-														<MarkdownPreview
-															source='## hello world
-															#### hello world
-															#### hello world
-															#### hello world
-															#### hello world
-															#### hello world
-															#### hello world
-															#### hello world
-															'
-															disallowedTypes={[
-																'image',
-																'code',
-																'list',
-															]}
-														/>
-													</div>
+												<div className='row mt-3'>
+													<MarkdownPreview
+														source={magazine.content}
+														disallowedTypes={[
+															'image',
+															'code',
+															'list',
+														]}
+													/>
+												</div>
 
-													<div className='row mt-3'>
-														<div className='embed-responsive embed-responsive-16by9 mb-4'>
-															<iframe
-																className='embed-responsive-item'
-																title='htmlflip5'
-																src='https://online.fliphtml5.com/nnxzj/rsiq/#p=1 '
-																allowFullScreen
-															></iframe>
-														</div>
+												<div className='row mt-3'>
+													<div className='embed-responsive embed-responsive-16by9 mb-4'>
+														<iframe
+															className='embed-responsive-item'
+															title='htmlflip5'
+															src={magazine.url}
+															allowFullScreen
+														></iframe>
 													</div>
-													<div className='row mt-3'>
+												</div>
+												<div className='row mt-3'>
+													<a
+														href={magazine.downlaod_url}
+														className='w-100'
+														download
+													>
 														<button
 															className='btn btn-info waves-block w-100 p-4 font-weight-bold'
 															style={{ fontSize: 18 }}
 														>
 															Download Magazine
 														</button>
-													</div>
-												</form>
+													</a>
+												</div>
 											</div>
 										</div>
 									</div>

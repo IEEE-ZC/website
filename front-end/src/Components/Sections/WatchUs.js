@@ -1,6 +1,3 @@
-/* eslint-disable react/jsx-no-target-blank */
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 
 const WatchUs = () => {
@@ -8,20 +5,23 @@ const WatchUs = () => {
 		{
 			id: 1,
 			link: 'https://www.youtube.com/watch?v=UEAOxT4F43c',
-			href: '/imgs/watchus/Walking-robots.jpg',
+			href:
+				'https://res.cloudinary.com/ieeezc/image/upload/v1600273646/Walking-robots_g5tw5p.jpg',
 			text: 'Walking Robots Competition',
 		},
 		{
 			id: 0,
 			link: 'https://www.youtube.com/watch?v=52-cuI-MCSw',
-			href: '/imgs/watchus/CEC.jpg',
+			href:
+				'https://res.cloudinary.com/ieeezc/image/upload/v1600273651/CEC_hrxxpb.jpg',
 			active: 'active',
 			text: "IEEE'17 Story",
 		},
 		{
 			id: 2,
 			link: 'https://www.youtube.com/watch?v=L2w40X27X18',
-			href: '/imgs/watchus/AppX-closing.jpg',
+			href:
+				'https://res.cloudinary.com/ieeezc/image/upload/v1600273648/AppX-closing_mirrtm.jpg',
 			text: 'APPx: Hack your mind',
 		},
 	];
@@ -44,7 +44,6 @@ const WatchUs = () => {
 					className='col-12 carousel slide  carousel-fade carousel-thumbnails'
 					data-ride='carousel'
 				>
-					{/* <!--Slides--> */}
 					<div
 						className='carousel-inner wow fadeInUp'
 						data-wow-delay='0.2s'
@@ -56,8 +55,12 @@ const WatchUs = () => {
 									key={el.id}
 									className={`carousel-item ${el.active}`}
 								>
-									<a target='_blank' href={el.link}>
-										<img className='d-block w-100' src={el.href} />
+									<a href={el.link}>
+										<img
+											className='d-block w-100'
+											src={el.href}
+											alt='watchus '
+										/>
 									</a>
 									<div className='carousel-caption'>
 										<h3 className={`h3-responsive mb-2 ${el.color}`}>
@@ -69,7 +72,6 @@ const WatchUs = () => {
 						})}
 					</div>
 
-					{/* <!--Controls--> */}
 					<a
 						className='carousel-control-prev'
 						href='#carousel-thumb'
@@ -103,7 +105,7 @@ const WatchUs = () => {
 									data-target='#carousel-thumb'
 									data-slide-to={el.id}
 								>
-									<img src={el.href} width='100' />
+									<img src={el.href} width='100' alt='watchus' />
 								</li>
 							);
 						})}

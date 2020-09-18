@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect} from 'react';
 
 // components
 import Events from './Sections/Events';
@@ -21,12 +19,15 @@ const LandingPage = () => {
 	const IntroProps = {
 		Slogan: 'Building Community',
 	};
+
 	const AboutProps = {
 		title: 'A Glimpse',
 		text:
 			" When a leader, be a serving bottle that flows into others' cups. You have the responsibility of filling your bottle with sufficient knowledge to flow it into their cups, and when you do; knowledge will prevail in the whole team. ",
-		img: './imgs/glimpse/glimpse.jpg',
+		img:
+			'https://res.cloudinary.com/ieeezc/image/upload/v1600273223/glimpse_yczajc.jpg',
 	};
+
 	const ScrollSpyItems = {
 		NavItems: [
 			{ id: 1, name: 'Home', href: 'home' },
