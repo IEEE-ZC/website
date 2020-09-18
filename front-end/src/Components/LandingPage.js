@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+
 
 // components
 import Events from './Sections/Events';
@@ -10,22 +10,13 @@ import CoreValue from './Sections/CoreValue';
 import WatchUs from './Sections/WatchUs';
 import ScrollSpy from './Sections/ScrollSpy';
 import Intro from './Sections/Intro';
-import Preloader from '../Components/Layout/Preloader';
-
 import WOW from 'wowjs';
 const LandingPage = () => {
-	const [loading, setLoading] = useState(true);
-
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		document.title = 'IEEE| Home';
 		new WOW.WOW().init();
-
-		window.addEventListener('load', function () {
-			setLoading(false);
-		});
 	}, []);
-
 
 	const IntroProps = {
 		Slogan: 'Building Community',
@@ -50,7 +41,6 @@ const LandingPage = () => {
 
 	return (
 		<>
-			<AnimatePresence>{loading && <Preloader />}</AnimatePresence>
 			<Intro IntroProps={IntroProps} />
 			<Events />
 			<ScrollSpy Items={ScrollSpyItems.NavItems} />
