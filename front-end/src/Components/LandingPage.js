@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
 import WOW from 'wowjs';
 
 // components
@@ -10,19 +9,12 @@ import CoreValue from './Sections/CoreValue';
 import WatchUs from './Sections/WatchUs';
 import ScrollSpy from './Sections/ScrollSpy';
 import Intro from './Sections/Intro';
-import Preloader from '../Components/Layout/Preloader';
 
 const LandingPage = () => {
-	const [loading, setLoading] = useState(true);
-
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		document.title = 'IEEE| Home';
 		new WOW.WOW().init();
-
-		setTimeout(() => {
-			setLoading(false);
-		}, 2500);
 	}, []);
 
 	const IntroProps = {
@@ -51,7 +43,6 @@ const LandingPage = () => {
 
 	return (
 		<>
-			<AnimatePresence>{loading && <Preloader />}</AnimatePresence>
 			<Intro IntroProps={IntroProps} />
 			<Events />
 			<ScrollSpy Items={ScrollSpyItems.NavItems} />
