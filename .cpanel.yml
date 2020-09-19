@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/user/Website/
+    - /bin/cp -R frontend $DEPLOYPATH
