@@ -1,4 +1,5 @@
-import React, { useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
+import WOW from 'wowjs';
 
 // components
 import Events from './Sections/Events';
@@ -8,7 +9,7 @@ import CoreValue from './Sections/CoreValue';
 import WatchUs from './Sections/WatchUs';
 import ScrollSpy from './Sections/ScrollSpy';
 import Intro from './Sections/Intro';
-import WOW from 'wowjs';
+
 const LandingPage = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);

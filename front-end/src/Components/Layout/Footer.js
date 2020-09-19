@@ -6,8 +6,8 @@
 import React, { useState } from 'react';
 import { CONTACT_US } from '../../EndPoints';
 import axios from 'axios';
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 const Footer = () => {
 	const MySwal = withReactContent(Swal);
@@ -25,11 +25,12 @@ const Footer = () => {
 		e.preventDefault();
 		axios
 			.post(CONTACT_US, form)
-			.then(res => {
+			.then((res) => {
 				MySwal.fire(
 					`Your Message  ${res.data.subject}  has already been sent`,
 					'We will communicate soon 😃',
-					'success');
+					'success'
+				);
 				setForm({
 					name: '',
 					email: '',
@@ -113,7 +114,10 @@ const Footer = () => {
 										</div>
 
 										<div className='text-center'>
-											<button onclick="toastr.success('Hi! I am success message.');" className='btn btn-rounded btn-outline-blue waves-effect'>
+											<button
+												onClick="toastr.success('Hi! I am success message.');"
+												className='btn btn-rounded btn-outline-blue waves-effect'
+											>
 												Send <i className='far fa-paper-plane'></i>
 											</button>
 										</div>
